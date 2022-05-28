@@ -1,0 +1,20 @@
+{
+    "name": "Hexiled.ProceduralMeshes.Generators",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bb8432eab57ca4cf7be8931e2aa53fd6",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:bf0cd10970abd4cf692b83cf0e7247f1",
+        "GUID:0e41d0b1b802241f0a0c27b74ba3d62d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

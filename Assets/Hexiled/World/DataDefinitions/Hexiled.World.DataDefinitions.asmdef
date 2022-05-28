@@ -1,0 +1,16 @@
+{
+    "name": "Hexiled.World.DataDefinitions",
+    "rootNamespace": "",
+    "references": [
+        "GUID:42a9aa2e5e2dd4b6cb06dd71a380d3de"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

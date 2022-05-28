@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 026c3dd65bf3c4f318c0798da9578751
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - worldEventSystem: {fileID: 11400000, guid: 394f66fd0da83409a9730b094baff1d9, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

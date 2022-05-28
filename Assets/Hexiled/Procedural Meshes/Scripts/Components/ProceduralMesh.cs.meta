@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 48315053a77ea4a2bb2b35cccc9229d4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - generatorGraph: {fileID: 11400000, guid: 65223e63bc48a41be8213062bdc2edbc, type: 2}
+  - offsetSO: {fileID: 11400000, guid: 5ec59cfc056d5469589e117d15e369de, type: 2}
+  - currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
+  - graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  - heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

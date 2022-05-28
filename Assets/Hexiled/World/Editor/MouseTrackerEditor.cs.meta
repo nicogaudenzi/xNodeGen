@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fd33765d0c60c4e4b8d765e360bc8fb6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - markerPos: {fileID: 11400000, guid: 9529760e81de34ef0b4af80de5f35843, type: 2}
+  - currentLayer: {fileID: 11400000, guid: a33599f19dded458ba607422085bc955, type: 2}
+  - mouseHitPos: {fileID: 11400000, guid: b56bf4cc812ba49adb6777921d31c618, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

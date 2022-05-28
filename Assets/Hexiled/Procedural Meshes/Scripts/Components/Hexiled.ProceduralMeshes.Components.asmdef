@@ -1,0 +1,23 @@
+{
+    "name": "Hexiled.ProceduralMeshes.Components",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0e41d0b1b802241f0a0c27b74ba3d62d",
+        "GUID:c87757164ff0947e995d74a8fbab4c9f",
+        "GUID:42a9aa2e5e2dd4b6cb06dd71a380d3de",
+        "GUID:bf0cd10970abd4cf692b83cf0e7247f1",
+        "GUID:6b771566a44814e66b8d613798b56a0a",
+        "GUID:b8e24fd1eb19b4226afebb2810e3c19b",
+        "GUID:bb8432eab57ca4cf7be8931e2aa53fd6",
+        "GUID:5f44696a52ac948f696e3078c4caa454"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

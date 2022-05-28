@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 9a905e3dc1b3547c489a463635165340
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - markerPos: {fileID: 11400000, guid: 9529760e81de34ef0b4af80de5f35843, type: 2}
+  - mouseHitPosition: {fileID: 11400000, guid: b56bf4cc812ba49adb6777921d31c618, type: 2}
+  - finishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  - askTileRepaint: {fileID: 11400000, guid: 06d359d40569446909eac205922e2a2e, type: 2}
+  - askMeshRepaint: {fileID: 11400000, guid: df6dbbbd4a41b43c6ae7e3a1be3054cc, type: 2}
+  - startMouseDrag: {fileID: 11400000, guid: 78709435f99f044a5aa6a97a79cfe483, type: 2}
+  - resolveClick: {fileID: 11400000, guid: 9301966a37a4b4029b77f44196b75cbf, type: 2}
+  - selectedChunckChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
+  - selectedChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

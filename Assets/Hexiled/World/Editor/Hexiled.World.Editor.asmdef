@@ -1,0 +1,19 @@
+{
+    "name": "Hexiled.World.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6b771566a44814e66b8d613798b56a0a",
+        "GUID:42a9aa2e5e2dd4b6cb06dd71a380d3de",
+        "GUID:c87757164ff0947e995d74a8fbab4c9f",
+        "GUID:630e38a523d524426b8e7804c52b6c46"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+{
+    "name": "ProceduralMeshEditor",
+    "rootNamespace": "",
+    "references": [
+        "Hexiled.ProceduralMeshes",
+        "Hexiled.GenGraph",
+        "Hexiled.World.Events",
+        "Hexiled.ProceduralMeshes.Components"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
