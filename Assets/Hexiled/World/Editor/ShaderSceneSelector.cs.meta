@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b8776fd6d9f1e4fc98d529296dded433
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - shadebar: {fileID: 11400000, guid: 85dcd4c3e80d34644a59db7170dcd159, type: 2}
+  - shadeTips: {fileID: 11400000, guid: 896f19ad5c7594275a28dc91ac7736f8, type: 2}
+  - terrainVisibility: {fileID: 11400000, guid: 01586c2bdd4324a01b68fdd8d3e37d79, type: 2}
+  - terrainVisible: {fileID: 11400000, guid: bc294116e1664467ba646b580a584c95, type: 2}
+  - chunckChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
+  - shadeBarChanged: {fileID: 11400000, guid: 103f45b74e44f4127a1348cc09726e10, type: 2}
+  - shadeBarNeedsRepaint: {fileID: 11400000, guid: e0e8eb35bffe744e89aacce6f1809f3b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

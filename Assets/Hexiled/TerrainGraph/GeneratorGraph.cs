@@ -4,28 +4,11 @@ using XNode;
 using Hexiled.World.Data;
 using Hexiled.World.Events;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName ="Generator Graph",menuName ="Hexiled/TerrainGraph/GeneratorGraph")]
 public class GeneratorGraph : NodeGraph
 { 
     public VoidEventSO graphChanged;
-    //private List<GraphEventListener> listeners =
-    //    new List<GraphEventListener>();
-
-    //public void Raise()
-    //{
-    //    for (int i = listeners.Count - 1; i >= 0; i--)
-    //        listeners[i].OnEventRaised();
-    //}
-    //public bool Contains(GraphEventListener gel)
-    //{
-    //    return listeners.Contains(gel) ? true : false;
-    //}
-    //public void RegisterListener(GraphEventListener listener)
-    //{ listeners.Add(listener); }
-
-    //public void UnregisterListener(GraphEventListener listener)
-    //{ listeners.Remove(listener); }
-
+    
 
 public Generator GetEndGenerator()
     {

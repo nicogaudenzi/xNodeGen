@@ -1,0 +1,20 @@
+{
+    "name": "Hexiled.GenGraph.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bf0cd10970abd4cf692b83cf0e7247f1",
+        "GUID:b8e24fd1eb19b4226afebb2810e3c19b",
+        "GUID:002c1bbed08fa44d282ef34fd5edb138",
+        "GUID:6b771566a44814e66b8d613798b56a0a",
+        "GUID:42a9aa2e5e2dd4b6cb06dd71a380d3de"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

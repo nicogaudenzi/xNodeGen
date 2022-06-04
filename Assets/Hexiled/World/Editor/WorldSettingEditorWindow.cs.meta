@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 765d949939d5344219968e1668a45875
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - settingEventHandler: {fileID: 11400000, guid: 6a2ae62d42fac42509340e4b260c7201, type: 2}
+  - editorBar: {fileID: 11400000, guid: efd20ef9c5540417390a95f673c063b3, type: 2}
+  - opState: {fileID: 11400000, guid: 2ae405592938447efb5180dfbda1286b, type: 2}
+  - layerVisibilityChanged: {fileID: 11400000, guid: 84336f4120c34449d895c0969888a539, type: 2}
+  - LayersChanged: {fileID: 11400000, guid: ebc4892985d2e46f58082ccaaa0b7516, type: 2}
+  - worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  - ChunckChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
+  - selectedChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

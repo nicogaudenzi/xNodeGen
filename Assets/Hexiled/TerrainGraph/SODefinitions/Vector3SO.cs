@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
-[CreateAssetMenu]
-public class Vector3SO:ScriptableObject
+namespace Hexiled.World.SO
 {
-    public Vector3 Value;
-}
+    [CreateAssetMenu(fileName = "Vector3IntSO", menuName = "Hexiled/SO/Vector3IntSO")]
+    public class Vector3SO : SOBase<Vector3>
+    {
+    }
 
+}

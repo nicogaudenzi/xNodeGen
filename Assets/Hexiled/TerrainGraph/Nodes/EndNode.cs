@@ -18,6 +18,8 @@ public class EndNode : XNode.Node
 	public Generator GetFinalGenerator()
 	{
 		//Debug.Log("Getting FINAL generator");
+		if (GetInputValue<AbsGeneratorNode>("Noise") == null)
+			return new Constant(0);
 		return GetInputValue<AbsGeneratorNode>("Noise").GetGenerator();
 	}
 }

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 3f6dc9cd386a946398eb8500c37bb2a5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - currentChunck: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

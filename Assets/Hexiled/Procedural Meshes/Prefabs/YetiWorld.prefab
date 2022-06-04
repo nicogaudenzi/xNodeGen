@@ -1,5 +1,144 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &963194225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963194228}
+  - component: {fileID: 963194227}
+  - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
+  - component: {fileID: 2872632052604665372}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &963194228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 100.9, y: 45.9, z: -30.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 889425906339274151}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 24.442, y: -93.2, z: 0}
+--- !u!20 &963194227
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.227451, g: 0.22352943, b: 0.5568628, a: 0}
+  m_projectionMatrixMode: 2
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 98.44229
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 216.7
+  field of view: 13.9
+  orthographic: 0
+  orthographic size: 25
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &963194226
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!1183024399 &2872632052604665372
+LookAtConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_Roll: 0
+  m_WorldUpObject: {fileID: 0}
+  m_UseUpObject: 0
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!1 &889425905275156824
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,7 +189,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425905275156824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -92,7 +231,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425905275156824}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -102,10 +241,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: 1, y: -1}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425905275156802
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -170,7 +318,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425905472582167}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -212,7 +360,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425905472582167}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -222,10 +370,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: -1, y: 0}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425905472582161
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -251,6 +408,13 @@ GameObject:
   - component: {fileID: 889425905568298422}
   - component: {fileID: 889425905568298420}
   - component: {fileID: 889425905568298423}
+  - component: {fileID: 889425906661396824}
+  - component: {fileID: 889425906661396825}
+  - component: {fileID: 889425906661396829}
+  - component: {fileID: 2525196277959370851}
+  - component: {fileID: 1817774053196743891}
+  - component: {fileID: 3108025234468663884}
+  - component: {fileID: 889425906661396828}
   m_Layer: 0
   m_Name: TerrainManager
   m_TagString: Untagged
@@ -303,9 +467,100 @@ MonoBehaviour:
   brushSize: {fileID: 11400000, guid: bdc7f8770752342018b095ec17c615a0, type: 2}
   currentChunck: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   UseCircleVoxelBrush: {fileID: 11400000, guid: daf4d67d71bcf496f8b99cf56b99f073, type: 2}
+  opState: {fileID: 11400000, guid: 2ae405592938447efb5180dfbda1286b, type: 2}
   brushTypeSelected: {fileID: 11400000, guid: cdcc0572634f74bd2905f12491a88201, type: 2}
   wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
   graph: {fileID: 11400000, guid: 65223e63bc48a41be8213062bdc2edbc, type: 2}
+  brushStrength: {fileID: 11400000, guid: c4ee0066664f54543bcb10ff44faa863, type: 2}
+--- !u!114 &889425906661396824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425905568298377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4c5376f8a2142b0b403f8fd457fa39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &889425906661396825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425905568298377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6dc9cd386a946398eb8500c37bb2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentChunck: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+--- !u!114 &889425906661396829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425905568298377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fcacebf318545e786c3bc18b92e907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentChunck: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  currentLayer: {fileID: 11400000, guid: 523fab326aa7149c6bffe84725e8cceb, type: 2}
+  showGrid: {fileID: 11400000, guid: d13a046dc8fa64a5caceb13b97f1dbbe, type: 2}
+--- !u!114 &2525196277959370851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425905568298377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ee873c4459c4750b696bdddc26baf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1817774053196743891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425905568298377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b49cc78680ba4750ba999a70d267645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3108025234468663884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425905568298377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ced4c5f92fdc4023b075585e876896f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &889425906661396828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425905568298377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c41d32d5aab4d4a968eee729220a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &889425905639202540
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +611,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425905639202540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -398,7 +653,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425905639202540}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -408,10 +663,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: 1, y: 0}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425905639202454
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -435,6 +699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 889425905667950832}
+  - component: {fileID: 6989833222198897997}
   m_Layer: 0
   m_Name: Neighbours
   m_TagString: Untagged
@@ -454,6 +719,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 854937752272389190}
   - {fileID: 889425905639202541}
   - {fileID: 889425905472582164}
   - {fileID: 889425906865034168}
@@ -462,6 +728,20 @@ Transform:
   m_Father: {fileID: 889425906339274151}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6989833222198897997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425905667950835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d871013c12f54bc1ad24152a4e2c27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibility: {fileID: 11400000, guid: bc294116e1664467ba646b580a584c95, type: 2}
 --- !u!1 &889425906339274150
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,12 +767,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906339274150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 128, y: 0, z: 0}
+  m_LocalPosition: {x: -32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 889425906586145240}
   - {fileID: 889425905667950832}
+  - {fileID: 963194228}
   m_Father: {fileID: 889425906476858925}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -560,7 +841,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906363897536}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -602,7 +883,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906363897536}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -612,10 +893,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: 1, y: 1}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425906363897546
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -661,7 +951,7 @@ Transform:
   - {fileID: 889425905568298422}
   - {fileID: 889425906339274151}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &889425906576674818
 GameObject:
@@ -713,7 +1003,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906576674818}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -755,7 +1045,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906576674818}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -765,10 +1055,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: 0, y: -1}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425906576674828
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -875,7 +1174,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906586145244}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -885,10 +1184,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: 0, y: 0}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425906586145241
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -912,6 +1220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 889425906677198914}
+  - component: {fileID: 889425906661396826}
   m_Layer: 0
   m_Name: ExtendedNeighbours
   m_TagString: Untagged
@@ -938,6 +1247,20 @@ Transform:
   m_Father: {fileID: 889425905667950832}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889425906661396826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889425906677198917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d871013c12f54bc1ad24152a4e2c27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibility: {fileID: 11400000, guid: bc294116e1664467ba646b580a584c95, type: 2}
 --- !u!1 &889425906692407356
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +1311,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906692407356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1030,7 +1353,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906692407356}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -1040,10 +1363,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: -1, y: -1}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425906692407334
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1108,7 +1440,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906865034171}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1150,7 +1482,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425906865034171}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -1160,10 +1492,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: 0, y: 1}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425906865034149
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1228,7 +1569,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425907184556751}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1270,7 +1611,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889425907184556751}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48315053a77ea4a2bb2b35cccc9229d4, type: 3}
   m_Name: 
@@ -1280,10 +1621,19 @@ MonoBehaviour:
   currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   offset: {x: -1, y: 1}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32
-  heightMultiplier: 3.54
+  heightMultiplier: 1
+  updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
 --- !u!64 &889425907184556745
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1298,3 +1648,91 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1001 &889425906785395629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 889425905667950832}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd1eb3e9ec84a47fcb0cbb1bb89e9703, type: 2}
+    - target: {fileID: 919132149155446097, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_Name
+      value: WaterPlane
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+--- !u!4 &854937752272389190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c16e201ff120f4459bc9fa640903b408, type: 3}
+  m_PrefabInstance: {fileID: 889425906785395629}
+  m_PrefabAsset: {fileID: 0}

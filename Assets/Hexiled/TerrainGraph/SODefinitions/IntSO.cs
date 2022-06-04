@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 namespace Hexiled.World.SO
 {
-    [CreateAssetMenu]
-    public class IntSO:ScriptableObject
+    [CreateAssetMenu(fileName = "IntSO", menuName = "Hexiled/SO/IntSO")]
+    public class IntSO:SOBase<int>
     {
-        public int Value;
     }
 }

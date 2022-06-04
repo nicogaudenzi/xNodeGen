@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 namespace Hexiled.World.SO
 {
-    [CreateAssetMenu]
-    public class BoolSO:ScriptableObject
+    [CreateAssetMenu(fileName ="BoolSO",menuName ="Hexiled/SO/BoolSO")]
+    public class BoolSO:SOBase<bool>
     {
-        public bool Value;
     }
 }

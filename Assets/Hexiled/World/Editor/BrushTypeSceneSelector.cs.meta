@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 37dcc9ab5f751439c9e06d68ec87a01c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - selectedChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - chunckChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
+  - fillConditions: {fileID: 11400000, guid: 8681b64999c9043e8b4b823f95ea54ee, type: 2}
+  - editorMode: {fileID: 11400000, guid: aa5a617e87e3e40b5914f53540ba84e0, type: 2}
+  - terrainBrushTips: {fileID: 11400000, guid: 949bfbc97491549a089d3e1447d61148, type: 2}
+  - editorModeTips: {fileID: 11400000, guid: 3946ce422189942429c2166016c28c73, type: 2}
+  - brushTypeSelected: {fileID: 11400000, guid: cdcc0572634f74bd2905f12491a88201, type: 2}
+  - brushTypeTips: {fileID: 11400000, guid: 530933a76c3fa40c1b8e1f15c51e3f0e, type: 2}
+  - useCircleVoxelBrush: {fileID: 11400000, guid: daf4d67d71bcf496f8b99cf56b99f073, type: 2}
+  - brushSize: {fileID: 11400000, guid: bdc7f8770752342018b095ec17c615a0, type: 2}
+  - voxelOptions: {fileID: 11400000, guid: 957a707ff0b024283a273e841f7ce0a3, type: 2}
+  - fillTips: {fileID: 11400000, guid: 51451ba79b90b47e085184ca80b3923a, type: 2}
+  - terrainVisivility: {fileID: 11400000, guid: bc294116e1664467ba646b580a584c95, type: 2}
+  - terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
+  - brushSelectionChanged: {fileID: 11400000, guid: 43213c9401a1c4144a6cc9340c7ed59c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

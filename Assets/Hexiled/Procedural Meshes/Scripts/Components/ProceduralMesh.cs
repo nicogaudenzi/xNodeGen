@@ -1,6 +1,7 @@
 using UnityEngine;
 using Unity.Collections;
 using Hexiled.World.Data;
+using Hexiled.World.SO;
 using Hexiled.World.Events;
 using Hexiled.ProceduralMeshes.Jobs;
 
@@ -15,31 +16,47 @@ namespace Hexiled.ProceduralMeshes.Components {
 		[SerializeField] public Vector2IntSO currentChunk;
 		[SerializeField] public Vector3EventSO chunkChanged;
 		[SerializeField] public VoidEventSO graphChanged;
+		[SerializeField] public Vector2IntEventSO askTerrainRepaint;
 
-
+		[SerializeField]
+		VoidEventSO TerrainSettingsChanged, FinishedEdition, worldDataChanged, rePaintTerrain, LODChanged;
+		[SerializeField]
+		BoolEventSO AutoUpdateChanged, terrainVisibilityChanged;
+		
 		public Vector2Int offset;
 		public int LOD { get; set; }
 		Mesh mesh,colliderMesh;
 
 		public ComputeShader heightMapComputeShader;
 
-
 		[SerializeField, Range(1, 32)]
 		public int resolution = 32;
+
 		[ReadOnly]
 		NativeArray<TileDataStruct> heightData;
 
 		[SerializeField]
 		public float heightMultiplier;
+
+		[SerializeField]
+		BoolSO updateGraph;
+
 		private void OnEnable()
 		{
 			if (!Application.isPlaying)
 			{
-				Debug.Log("Procedural Mesh Events Enabled");
 				if (chunkChanged != null)
 					chunkChanged.Event.AddListener(OnChunckChanged);
 				if (graphChanged != null)
 					graphChanged.Event.AddListener(GenerateMeshFromEditor);
+				if (askTerrainRepaint != null)
+					askTerrainRepaint.Event.AddListener(onAskTerrainRepaint);
+				LODChanged.Event.AddListener(GenerateMeshFromEditor);
+				FinishedEdition.Event.AddListener(GenerateMeshFromEditor);
+				worldDataChanged.Event.AddListener(GenerateMeshFromEditor);
+				rePaintTerrain.Event.AddListener(GenerateMeshFromEditor);
+
+				TerrainSettingsChanged.Event.AddListener(GenerateMeshFromEditor);
 			}
 		}
 		void Clean()
@@ -47,18 +64,31 @@ namespace Hexiled.ProceduralMeshes.Components {
 			if (!Application.isPlaying)
 			{
 				chunkChanged.Event.RemoveListener(OnChunckChanged);
+				graphChanged.Event.RemoveListener(GenerateMeshFromEditor);
+				if (askTerrainRepaint != null)
+					askTerrainRepaint.Event.RemoveListener(onAskTerrainRepaint);
 			}
+			
 		}
 		private void OnDisable() => Clean();
 		private void OnDestroy() => Clean();
 
 		public void OnChunckChanged(Vector3 v)
 		{
-			//Debug.Log(v);
 			GenerateMeshFromEditor();
 
 		}
+		void onAskTerrainRepaint(Vector2Int v)
+        {
 
+            if (v == currentChunk.Value + offset)
+            {
+				GenerateMeshFromEditor();
+
+			}
+
+
+		}
 		void Awake()
 		{
 			mesh = new Mesh
@@ -93,7 +123,7 @@ namespace Hexiled.ProceduralMeshes.Components {
 
 		public void GenerateMeshFromEditor()
 		{
-
+			if (!updateGraph.Value) return;
 			if(mesh==null)
 			mesh = new Mesh
 			{
@@ -105,14 +135,14 @@ namespace Hexiled.ProceduralMeshes.Components {
 				name = "Collider Mesh"
 			};
 			GetComponent<MeshCollider>().sharedMesh = colliderMesh;
-			//GenerateMesh();
 			GetComponent<MeshFilter>().mesh = mesh;
-			//data = HeightMapGenerator.GenerateHeightMapGPU(resolution, 2, 3, 2, 1, 128, new Vector2(0, 0), heightMapComputeShader);
-
 			GenerateMesh((offset + currentChunk.Value) * 32);
 		}
-
-		public void GenerateMesh(Vector2Int v) {
+		public void GenerateMesh(Vector3 v)
+		{
+			GenerateMesh(new Vector2Int(Mathf.FloorToInt(v.x), Mathf.FloorToInt(v.z)));
+		}
+			public void GenerateMesh(Vector2Int v) {
 
 			//data = HeightMapGenerator.GenerateHeightMapGPU(resolution, 2, 3, 2, 1, 128, new Vector2(0, 0), heightMapComputeShader);
 			offsetSO.Value = v;
@@ -138,7 +168,6 @@ namespace Hexiled.ProceduralMeshes.Components {
 			{
 				for (int j = 0; j < resolution; j++)
 				{
-					//heightData[i * resolution + j] = data[i,j]*heightMultiplier;
 					heightData[j * resolution + i] = new TileDataStruct(fGenerator.GetValue(i, 0, j) * heightMultiplier, _colors[i, 0, j]);
 				}
 			}
@@ -158,8 +187,8 @@ namespace Hexiled.ProceduralMeshes.Components {
 			Vector2 _position = coord * size;
 			Vector3 positionV3 = new Vector3(_position.x - .5f, 0, _position.y - .5f);
 			transform.position = positionV3;
-			LOD = LOD == 0 ? 1 : LOD;
-			resolution = 32 / LOD;
+			this.LOD = LOD == 0 ? 1 : LOD;
+			this.resolution = 32 / this.LOD;
 			Vector2Int _offset = 32 * new Vector2Int(Mathf.FloorToInt(coord.x), Mathf.FloorToInt(coord.y));
 			offset = _offset;
 			offsetSO.Value = _offset;

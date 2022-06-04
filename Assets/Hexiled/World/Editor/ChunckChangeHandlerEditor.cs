@@ -72,8 +72,8 @@ public class ChunckChangeHandlerEditor : Editor
             case EventType.MouseUp:
                 if (!changedChunk)
                 {
-                    bool remove = RemoveChunk(current);
-                    if (!remove)
+                    //bool remove = RemoveChunk(current);
+                    //if (!remove)
                         resolveClick.Event?.Invoke();
                 }
                 break;
@@ -142,6 +142,7 @@ public class ChunckChangeHandlerEditor : Editor
                         case 0:
                             if (wdc.WorldData.TerrainChunkHolder.ContainsKey(chunkCoords))
                                 wdc.WorldData.TerrainChunkHolder.Remove(chunkCoords);
+
                             break;
 
                         // Tilemap.
@@ -158,7 +159,8 @@ public class ChunckChangeHandlerEditor : Editor
                             Debug.LogError("Unrecognized option.");
                             break;
                     }
-
+                    EditorUtility.SetDirty(wdc.WorldData);
+                    AssetDatabase.SaveAssets();
                     return true;
                 }
             }

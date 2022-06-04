@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 6de2f9375aa9d4b54a41fae0b43e2d62
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - toolBar: {fileID: 11400000, guid: f1f41621e3667480a9d5254e5d4c98a6, type: 2}
+  - editorMode: {fileID: 11400000, guid: aa5a617e87e3e40b5914f53540ba84e0, type: 2}
+  - terrainOps: {fileID: 11400000, guid: f6a7c8347a6a0453095bab752acff716, type: 2}
+  - opTips: {fileID: 11400000, guid: 7ff4ff602addd44f4aca04acde77af61, type: 2}
+  - textureTips: {fileID: 11400000, guid: 3b13ce86cb2794acc86a26e0c6612656, type: 2}
+  - opState: {fileID: 11400000, guid: 2ae405592938447efb5180dfbda1286b, type: 2}
+  - geometryTips: {fileID: 11400000, guid: a024a3a2871d64f3699b802a6400d14c, type: 2}
+  - terrainEditorTips: {fileID: 11400000, guid: 45ec35aae70f741e48ce175104b6c9a1, type: 2}
+  - terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
+  - brushLoaded: {fileID: 11400000, guid: 43213c9401a1c4144a6cc9340c7ed59c, type: 2}
+  - brushTypeSelected: {fileID: 11400000, guid: cdcc0572634f74bd2905f12491a88201, type: 2}
+  - brushStrength: {fileID: 11400000, guid: c4ee0066664f54543bcb10ff44faa863, type: 2}
+  - brushProfile: {fileID: 11400000, guid: c83aa8fb6399c412fa072fd2bacfed1c, type: 2}
+  - color: {fileID: 11400000, guid: 9c09066c7b22842428045eee8f05807c, type: 2}
+  - brushContainer: {fileID: 11400000, guid: e149213db13134517baefc9a11072a53, type: 2}
+  - useColorWhilePattern: {fileID: 11400000, guid: 0fc16da424a0849bca89aef64411b728, type: 2}
+  - useGeometryWhilePattern: {fileID: 11400000, guid: fd0b48f83798e49e589b01145e6883ed, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

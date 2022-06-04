@@ -14,6 +14,7 @@ public abstract class AbsGeneratorNode : XNode.Node
 	private void _OnValidate()
     {
 		GeneratorGraph generatorGraph = graph as GeneratorGraph;
+		if (generatorGraph == null) return;
 		generatorGraph.graphChanged.Event.Invoke();
 		UnityEditor.EditorApplication.delayCall -= _OnValidate;
 	}

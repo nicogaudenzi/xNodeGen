@@ -9,7 +9,9 @@ MonoImporter:
   - currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
   - chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   - graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
+  - askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
   - heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
+  - updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

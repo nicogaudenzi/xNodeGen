@@ -3,7 +3,15 @@ guid: 0aa925fa33d14429a8ca241c4c538937
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - meshObjectprefab: {instanceID: 0}
+  - viewer: {instanceID: 0}
+  - worldData: {fileID: 11400000, guid: 6d1ed4764d9bc401f95e92efa9e697e9, type: 2}
+  - generatorGraph: {fileID: 11400000, guid: 65223e63bc48a41be8213062bdc2edbc, type: 2}
+  - heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
+  - offsetSO: {fileID: 11400000, guid: 5ec59cfc056d5469589e117d15e369de, type: 2}
+  - currentChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - terrainMaterial: {fileID: 2100000, guid: f003cb8e5568241d98d4b6d1962c4d7e, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

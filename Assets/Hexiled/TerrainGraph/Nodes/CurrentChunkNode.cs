@@ -1,16 +1,17 @@
 ﻿using Hexiled.World.SO;
-using Hexiled.World.Data;
 using UnityEngine;
 using XNode;
 [CreateNodeMenu("Scene/CurrentChunk")]
 public class CurrentChunkNode:AbsGeneratorNode
 {
-    public CurrentChunk currentChunk;
+    public Vector2IntSO currentChunk;
     [Input] public TerrainChunkHolder terrainData;
 
     public override Generator GetGenerator()
     {
-        return new ContainerGenerator(terrainData[currentChunk.Value]);
+        var genNode1 = GetInputValue<TerrainChunkHolder>("terrainData");
+
+        return new ContainerGenerator(genNode1[currentChunk.Value]);
     }
 
     public override string GetTitle()

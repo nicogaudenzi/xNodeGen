@@ -52,8 +52,15 @@ namespace Hexiled.World.Components
             terrainChunkDictionary.Keys.CopyTo(keys, 0);
             foreach(Vector2 v in keys)
             {
+                int LOD = CalculateLOD( v * 32);
+                LOD = LOD == 0 ? 1 : LOD;
                 GameObject go = terrainChunkDictionary[v];
-                if ((go.transform.position - viewer.transform.position).magnitude > maxViewDst)
+                ProceduralMesh proceduralMesh = go.GetComponent<ProceduralMesh>();
+                if (proceduralMesh.resolution < 32/LOD)
+                {
+                    proceduralMesh.PositionAndGenerate(v,32,LOD, maxViewDst);
+                }
+                if((viewerPosition-v*32).magnitude > maxViewDst)
                 {
                     _pool.Release(go);
                     terrainChunkDictionary.Remove(v);
@@ -66,23 +73,24 @@ namespace Hexiled.World.Components
                 {
                     Vector2 viewedChunkCoord = new Vector2(currentChunkCoordX + xOffset, currentChunkCoordY + yOffset);
                     if (!terrainChunkDictionary.ContainsKey(viewedChunkCoord))
-                    
+                    {
+                        //Debug.Log((viewerPosition - viewedChunkCoord * 32).magnitude);
                         if ((viewerPosition - viewedChunkCoord * 32).magnitude < maxViewDst)
                         {
-                            int LOD = CalculateLOD(viewerPosition, viewedChunkCoord * 32);
+                            int LOD = CalculateLOD(viewedChunkCoord * 32);
                             GameObject go = _pool.Get();
                             ProceduralMesh pm = go.GetComponent<ProceduralMesh>();
                             pm.PositionAndGenerate(viewedChunkCoord, 32, LOD, maxViewDst);
                             terrainChunkDictionary.Add(viewedChunkCoord, go);
                         }
-
+                    }
                     }
                 }
             }
-        int CalculateLOD(Vector3 pos, Vector3 viewerPos)
+        int CalculateLOD(Vector2 pos)
         {
-            int r = Mathf.RoundToInt((pos - viewerPos).magnitude) / 32;
-            r = r > 5 ? 5 : r - 1 < 0 ? 0 : r - 1;
+            Vector2 viewerPos = new Vector2(viewer.position.x, viewer.position.z) - new Vector2(32, 32  );
+            int r =Mathf.FloorToInt(Mathf.Abs((pos - viewerPos).magnitude/48f));
             return r;
         }
     }

@@ -125,7 +125,14 @@ namespace Hexiled.World.Data
     {
 
         public Cols<T>[] column;
-
+        public DataLayer()
+        {
+            column = new Cols<T>[32];
+            for (int i = 0; i < column.Length; i++)
+            {
+                column[i] = new Cols<T>(32);
+            }
+        }
         public DataLayer(int NumberOfColumns, int NumberOfRows)
         {
             column = new Cols<T>[NumberOfColumns];

@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: dbef1e6b68f9f46c1b399024ba3bef83
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - opState: {fileID: 11400000, guid: 2ae405592938447efb5180dfbda1286b, type: 2}
+  - markerPos: {fileID: 11400000, guid: 9529760e81de34ef0b4af80de5f35843, type: 2}
+  - BrushSize: {fileID: 11400000, guid: bdc7f8770752342018b095ec17c615a0, type: 2}
+  - selectedPalette: {fileID: 11400000, guid: e24bd9046846a47ca92280b9f571474c, type: 2}
+  - brushTypeSelected: {fileID: 11400000, guid: cdcc0572634f74bd2905f12491a88201, type: 2}
+  - editingLayer: {fileID: 11400000, guid: 523fab326aa7149c6bffe84725e8cceb, type: 2}
+  - TileMapSelected: {fileID: 11400000, guid: 2dadd14e7d9f242a7ace34ec0cd9b51c, type: 2}
+  - textureTileWidth: {fileID: 11400000, guid: 64aa0bb275bf343b388799c7a733e528, type: 2}
+  - textureTileHeight: {fileID: 11400000, guid: dc3c68ff9922f4f18b2ec4394085bfc6, type: 2}
+  - Toolbar: {fileID: 11400000, guid: f1f41621e3667480a9d5254e5d4c98a6, type: 2}
+  - editorMode: {fileID: 11400000, guid: aa5a617e87e3e40b5914f53540ba84e0, type: 2}
+  - mouseHitPosition: {fileID: 11400000, guid: b56bf4cc812ba49adb6777921d31c618, type: 2}
+  - hit: {fileID: 11400000, guid: 46a71a558876a448386fd647df6c34d0, type: 2}
+  - terrainVisibility: {fileID: 11400000, guid: bc294116e1664467ba646b580a584c95, type: 2}
+  - finishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  - askTileRepaint: {fileID: 11400000, guid: 06d359d40569446909eac205922e2a2e, type: 2}
+  - brushLoaded: {fileID: 11400000, guid: 43213c9401a1c4144a6cc9340c7ed59c, type: 2}
+  - layerUndo: {fileID: 11400000, guid: 0cce073f18b294b38bccb4b5b4ff8cfb, type: 2}
+  - startMouseDrag: {fileID: 11400000, guid: 78709435f99f044a5aa6a97a79cfe483, type: 2}
+  - resolveClick: {fileID: 11400000, guid: 9301966a37a4b4029b77f44196b75cbf, type: 2}
+  - meshRotate: {fileID: 11400000, guid: 7a4290adab11d4e8f8ff949896f759fe, type: 2}
+  - instanceBaked: {fileID: 11400000, guid: e7fc482a503814784a419228b6f7f1df, type: 2}
+  - askMeshRepaint: {fileID: 11400000, guid: df6dbbbd4a41b43c6ae7e3a1be3054cc, type: 2}
+  - bakedFinished: {fileID: 11400000, guid: dfa9ae03efadf44c1a95f8b4e34bc7df, type: 2}
+  - editorModeChanged: {fileID: 11400000, guid: 535a8cef4eb164677983d919c18cf24c, type: 2}
+  - UseCircleVoxelBrush: {fileID: 11400000, guid: daf4d67d71bcf496f8b99cf56b99f073, type: 2}
+  - tileEditorState: {fileID: 11400000, guid: 1a353c19393f542e99c6771d57067b9a, type: 2}
+  - fcc: {fileID: 11400000, guid: 8681b64999c9043e8b4b823f95ea54ee, type: 2}
+  - setHeight: {fileID: 11400000, guid: 7f0838b3df2314f13986c749450cefe3, type: 2}
+  - putPrefab: {fileID: 11400000, guid: 92ab36d66ff82403097e87498cc9fb36, type: 2}
+  - deleteMesh: {fileID: 11400000, guid: da2571563d162496a8487b3b6692ec4b, type: 2}
+  - placePrefab: {fileID: 11400000, guid: 958362e3e2dc14c5fac049791706557f, type: 2}
+  - selectedChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

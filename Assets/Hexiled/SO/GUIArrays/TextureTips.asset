@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde6817d5c64349c5b299314580158eb, type: 3}
+  m_Name: TextureTips
+  m_EditorClassIdentifier: 
+  value:
+  - Texture: {fileID: 2800000, guid: f9b9f6f2783984705aecfeb66f911cc4, type: 3}
+    text: Top (Up-Arrow)
+  - Texture: {fileID: 2800000, guid: d024dbd41668545ec8c5a4f91a6f2e49, type: 3}
+    text: Bottom (Down-Arrow)
+  - Texture: {fileID: 2800000, guid: cb0dcc5345ada449580ba2a29606e9f5, type: 3}
+    text: Light (D)
+  - Texture: {fileID: 2800000, guid: ebb263acc35c24a98abde5d2cb2db3a6, type: 3}
+    text: Walkable (W)
+  - Texture: {fileID: 2800000, guid: 0da6fc6ad8ef549799e92fc724c493d8, type: 3}
+    text: Tint (T)

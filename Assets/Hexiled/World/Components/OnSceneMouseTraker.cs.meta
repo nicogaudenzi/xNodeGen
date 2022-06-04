@@ -3,7 +3,18 @@ guid: dc6fc965ecb554911a1520e6aacf0d09
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - markerPos: {fileID: 11400000, guid: 9529760e81de34ef0b4af80de5f35843, type: 2}
+  - currentLayer: {fileID: 11400000, guid: a33599f19dded458ba607422085bc955, type: 2}
+  - mouseHitPosition: {fileID: 11400000, guid: b56bf4cc812ba49adb6777921d31c618, type: 2}
+  - brushSize: {fileID: 11400000, guid: bdc7f8770752342018b095ec17c615a0, type: 2}
+  - currentChunck: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - UseCircleVoxelBrush: {fileID: 11400000, guid: daf4d67d71bcf496f8b99cf56b99f073, type: 2}
+  - opState: {fileID: 11400000, guid: 2ae405592938447efb5180dfbda1286b, type: 2}
+  - brushTypeSelected: {fileID: 11400000, guid: cdcc0572634f74bd2905f12491a88201, type: 2}
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - graph: {fileID: 11400000, guid: 65223e63bc48a41be8213062bdc2edbc, type: 2}
+  - brushStrength: {fileID: 11400000, guid: c4ee0066664f54543bcb10ff44faa863, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

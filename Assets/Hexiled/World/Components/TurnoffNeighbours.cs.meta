@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7d871013c12f54bc1ad24152a4e2c27e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - autoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  - terrainVisibility: {fileID: 11400000, guid: bc294116e1664467ba646b580a584c95, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

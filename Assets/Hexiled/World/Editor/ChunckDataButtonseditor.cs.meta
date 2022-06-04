@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 463d186ead59642d18e47cc323a21ef6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - currentchunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - askForTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Hexiled.World.Events;
+using Hexiled.World.SO;
 namespace Hexiled.World.Components
 {
     [ExecuteInEditMode]

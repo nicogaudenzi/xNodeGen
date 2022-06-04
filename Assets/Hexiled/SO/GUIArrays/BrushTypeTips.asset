@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde6817d5c64349c5b299314580158eb, type: 3}
+  m_Name: BrushTypeTips
+  m_EditorClassIdentifier: 
+  value:
+  - Texture: {fileID: 2800000, guid: cb5ffbb1739134cc193393ad1b3d5db9, type: 3}
+    text: Voxel (1)
+  - Texture: {fileID: 2800000, guid: caaf82c2e6e2c45cd988c1ef2227219c, type: 3}
+    text: Circle (2)
+  - Texture: {fileID: 2800000, guid: 6113a735a36c14e03ab95f61f6f7ba29, type: 3}
+    text: Rectangle (3)
+  - Texture: {fileID: 2800000, guid: ff17ccd6c499d4ad486cf8c16a7aa336, type: 3}
+    text: Line (4)
+  - Texture: {fileID: 2800000, guid: e1b482679b8484a65836b1ca9df75089, type: 3}
+    text: Fill (5)
+  - Texture: {fileID: 2800000, guid: 7c5f61f5284ed42ef97f7b0e527d1349, type: 3}
+    text: Pattern (6)

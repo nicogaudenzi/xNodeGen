@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f1fcacebf318545e786c3bc18b92e907
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - currentChunck: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - currentLayer: {fileID: 11400000, guid: 523fab326aa7149c6bffe84725e8cceb, type: 2}
+  - showGrid: {fileID: 11400000, guid: d13a046dc8fa64a5caceb13b97f1dbbe, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

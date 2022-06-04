@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e67712a44e6984b00a0228ccca768211
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wdc: {fileID: 11400000, guid: 59f0427ee2def45f2a0318936c311e62, type: 2}
+  - selectedChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - editingLayer: {fileID: 11400000, guid: 523fab326aa7149c6bffe84725e8cceb, type: 2}
+  - layersChanged: {fileID: 11400000, guid: ebc4892985d2e46f58082ccaaa0b7516, type: 2}
+  - askRepaint: {fileID: 11400000, guid: 06d359d40569446909eac205922e2a2e, type: 2}
+  - deletedTopLayer: {fileID: 11400000, guid: e9e7dfbaffbd740d4a2f12a7264567eb, type: 2}
+  - setLayerVisibility: {fileID: 11400000, guid: eea09894c268e45cda43f3652ba768a2, type: 2}
+  - undoAsked: {fileID: 11400000, guid: 0cce073f18b294b38bccb4b5b4ff8cfb, type: 2}
+  - askMeshRepaint: {fileID: 11400000, guid: df6dbbbd4a41b43c6ae7e3a1be3054cc, type: 2}
+  - repainTerrain: {fileID: 11400000, guid: 171747ac72aaa44f3990ba68dd748564, type: 2}
+  - opState: {fileID: 11400000, guid: 2ae405592938447efb5180dfbda1286b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

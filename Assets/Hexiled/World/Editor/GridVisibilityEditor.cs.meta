@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 11b9a619de0a34f76bafe01c0ec78a70
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - showGrid: {fileID: 11400000, guid: d13a046dc8fa64a5caceb13b97f1dbbe, type: 2}
+  - editorMode: {fileID: 11400000, guid: aa5a617e87e3e40b5914f53540ba84e0, type: 2}
+  - terrainVisibility: {fileID: 11400000, guid: 01586c2bdd4324a01b68fdd8d3e37d79, type: 2}
+  - TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  - AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  - terrainVisible: {fileID: 11400000, guid: 2a37c9c8c7f1f45bfa914cb51ce181b6, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

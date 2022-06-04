@@ -3,7 +3,15 @@ guid: 9f6aad7b5f60641cb98f3ae37cd90ae4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - palette: {fileID: 2800000, guid: e7896725ea0a7492ab44421d3183a5e4, type: 3}
+  - worldTilemaps: {instanceID: 0}
+  - worldMeshes: {instanceID: 0}
+  - terrainSettings: {instanceID: 0}
+  - mapPrefabsContainer: {instanceID: 0}
+  - PreviewIcon: {fileID: 2800000, guid: e17bbb27734d745a0832af6b9f7095a9, type: 3}
+  - worldEventSystem: {fileID: 11400000, guid: 394f66fd0da83409a9730b094baff1d9, type: 2}
+  - worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

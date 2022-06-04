@@ -19,21 +19,6 @@ namespace Hexiled.World.Editor
         WorldData w;
         private void OnEnable()
         {
-            //if (askRepaint == null)
-            //    askRepaint = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "askedForTileRepaint" + ".asset");
-            //if (worldDataChanged == null)
-            //    worldDataChanged = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "worldDataChanged" + ".asset");
-            //if (updateMaterialList == null)
-            //    updateMaterialList = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "UpdateMaterialList" + ".asset");
-            //if (repaintTileEditor == null)
-            //    repaintTileEditor = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "repaintTileEditor" + ".asset");
-            //if (repaintPaletteEditor == null)
-            //    repaintPaletteEditor = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "repaintPaletteEditor" + ".asset");
-            //if (icon == null)
-            //    icon = (Texture2D)EditorGUIUtility.LoadRequired("Icons/WorldDataIcon.png");
-            //if (meshRotate == null)
-            //    meshRotate = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "RotateMesh" + ".asset");
-
             w = (WorldData)target;
 
         }
@@ -76,7 +61,6 @@ namespace Hexiled.World.Editor
         void Load()
         {
             var path = AssetDatabase.GetAssetPath(target);
-            //WorldDataContainer wdc = AssetDatabase.LoadAssetAtPath<WorldDataContainer>("Assets/Editor Default Resources/" + InternalPaths.stateObjects + "World Data Container" + ".asset");
             Object[] data = AssetDatabase.LoadAllAssetsAtPath(path);
             Undo.RegisterCompleteObjectUndo(wdc, "World Data Changed");
 

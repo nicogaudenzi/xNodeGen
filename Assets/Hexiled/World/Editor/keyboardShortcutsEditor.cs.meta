@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 04264682c89c64f41b4fe32ea988dfe9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fcc: {fileID: 11400000, guid: 8681b64999c9043e8b4b823f95ea54ee, type: 2}
+  - brushType: {fileID: 11400000, guid: cdcc0572634f74bd2905f12491a88201, type: 2}
+  - toolbar: {fileID: 11400000, guid: f1f41621e3667480a9d5254e5d4c98a6, type: 2}
+  - brushSize: {fileID: 11400000, guid: bdc7f8770752342018b095ec17c615a0, type: 2}
+  - shadeBar: {fileID: 11400000, guid: 85dcd4c3e80d34644a59db7170dcd159, type: 2}
+  - terrainOps: {fileID: 11400000, guid: f6a7c8347a6a0453095bab752acff716, type: 2}
+  - brushTypeChanged: {fileID: 11400000, guid: 7f1e1e23428464fa6a696beb113a0e7f, type: 2}
+  - opTypeChanged: {fileID: 11400000, guid: 0a4758803935c40d083bf2a441a7f9e6, type: 2}
+  - shadeBarNeedsRepaint: {fileID: 11400000, guid: e0e8eb35bffe744e89aacce6f1809f3b, type: 2}
+  - shadeBarChanged: {fileID: 11400000, guid: 103f45b74e44f4127a1348cc09726e10, type: 2}
+  - useCircleVoxelBrush: {fileID: 11400000, guid: daf4d67d71bcf496f8b99cf56b99f073, type: 2}
+  - opState: {fileID: 11400000, guid: 2ae405592938447efb5180dfbda1286b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

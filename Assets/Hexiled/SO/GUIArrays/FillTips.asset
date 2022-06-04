@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde6817d5c64349c5b299314580158eb, type: 3}
+  m_Name: FillTips
+  m_EditorClassIdentifier: 
+  value:
+  - Texture: {fileID: 2800000, guid: f9b9f6f2783984705aecfeb66f911cc4, type: 3}
+    text: Top (Ctrl-2)
+  - Texture: {fileID: 2800000, guid: d024dbd41668545ec8c5a4f91a6f2e49, type: 3}
+    text: Bottom (Ctrl-3)
+  - Texture: {fileID: 2800000, guid: 27cb1544ed2434b83a84bf850b2619a8, type: 3}
+    text: Height (Ctrl-4)
+  - Texture: {fileID: 2800000, guid: 06ba59e2917ac430093ee2673e61dc2f, type: 3}
+    text: Rotation (Ctrl-5)
+  - Texture: {fileID: 2800000, guid: ebb263acc35c24a98abde5d2cb2db3a6, type: 3}
+    text: Walkable (Ctrl-6)
+  - Texture: {fileID: 2800000, guid: 0da6fc6ad8ef549799e92fc724c493d8, type: 3}
+    text: Tint (Ctrl-6)

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b626fd7b26644f7bf0a45eae493712, type: 3}
+  m_Name: Operations State
+  m_EditorClassIdentifier: 
+  brushSize: {fileID: 11400000, guid: bdc7f8770752342018b095ec17c615a0, type: 2}
+  useCircleVoxelBrush: {fileID: 11400000, guid: daf4d67d71bcf496f8b99cf56b99f073, type: 2}
+  SceneSelectedTiles: []
+  layerVisibility: 01
+  setTint: 0
+  paintTopTexture: 0
+  paintBottomTexture: 0
+  changeLight: 0
+  darken: 0
+  makeWalkable: 0
+  walkableValue: 0
+  changeHeight: 0
+  rotateUV: 0
+  rndDark: 0
+  setDarknes: 0
+  preserveRotation: 0
+  rndRot: 0
+  setRotation: 0
+  rndHeight: 0
+  setHeight: 0
+  autoChangeLayerWithSize: 0
+  useBottomLayerAsMask: 0
+  meshRotate: 0
+  switchLayerUp: 0
+  switchLayerDown: 0
+  autoDeleteWhenTooThin: 0
+  useTextureCoordinates: 0
+  useTint: 0
+  setHeightValue: 0
+  combineVSinstanciate: 0
+  setDarknessValue: 0
+  minVal: 0.3
+  maxVal: 0.6
+  setRotationValue: 0
+  room: 0
+  selectedMesh: 0
+  meshRot: 0
+  steep: 0
+  meshPrefabSelection: 0
+  selectedColor: 0
+  roomIndex: 0
+  useSelectionAsMask: {fileID: 11400000, guid: a1810b65cb8f848e289027e4fb2940f4, type: 2}
+  toolBar: {fileID: 11400000, guid: f1f41621e3667480a9d5254e5d4c98a6, type: 2}
+  usePlacedMask: {fileID: 11400000, guid: e0af75ef164cb41048ac1baf15b2569d, type: 2}
+  editingLayer: {fileID: 11400000, guid: 523fab326aa7149c6bffe84725e8cceb, type: 2}
+  currentRoom: {fileID: 11400000, guid: 1bdcafbded2f34f969f7722113870904, type: 2}
+  _filename: 
+  selectedMapPrefab: 0
+  prefabRot: 0
+  BrushTypeSelected: 0
+  CircleBrush: 0

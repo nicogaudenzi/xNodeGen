@@ -2,7 +2,8 @@
     "name": "Hexiled.World.DataDefinitions",
     "rootNamespace": "",
     "references": [
-        "GUID:42a9aa2e5e2dd4b6cb06dd71a380d3de"
+        "GUID:42a9aa2e5e2dd4b6cb06dd71a380d3de",
+        "GUID:6b771566a44814e66b8d613798b56a0a"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

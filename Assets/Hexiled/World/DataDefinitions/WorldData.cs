@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
-//using UnityAtoms.BaseAtoms;
+using Hexiled.World.Events;
 using RotaryHeart.Lib.SerializableDictionary;
 using UnityEditor;
 using Hexiled.World.Data;
@@ -18,38 +17,28 @@ namespace Hexiled.World.SO
     [System.Serializable]
     public class MeshesHolder : SerializableDictionaryBase<Vector3, int> { }
     
-    [CreateAssetMenu(menuName = "Hexiled/Yeti3D/Containers/WorldData")]
+    [CreateAssetMenu(menuName = "Hexiled/World/WorldData")]
     public class WorldData: ScriptableObject
     {
         [SerializeField]
-        //[HideInInspector]
         ChunkHolder worldChuncks;
         [SerializeField]
-        //[HideInInspector]
         TerrainChunkHolder terrainChunkHolder;
         [SerializeField]
-        //[HideInInspector]
         TerrainNoiseHoler terrains;
         [SerializeField]
-        //[HideInInspector]
         MeshesHolder mesheHolder;
         [SerializeField]
-        //[HideInInspector]
         ChunkHeightHolder tileHeightHolder;
         [SerializeField]
-        //[HideInInspector]
         Texture2D palette;
-        //[SerializeField]
-        //[HideInInspector]
-        public AtlasCollection worldTilemaps;
         [SerializeField]
-        //[HideInInspector]
+        AtlasCollection worldTilemaps;
+        [SerializeField]
         WorldMeshes worldMeshes;
         [SerializeField]
-        //[HideInInspector]
         TerrainSettings terrainSettings;
         [SerializeField]
-        //[HideInInspector]
         MapPrefabsContainer mapPrefabsContainer;
 
         public Material PropertiesMaterial { get; private set; }
@@ -57,7 +46,13 @@ namespace Hexiled.World.SO
         public WorldData(Material propertiesMaterial) => PropertiesMaterial = propertiesMaterial;
 
         public ChunkHolder WorldChuncks { get => worldChuncks; private set => worldChuncks = value; }
-        public TerrainChunkHolder TerrainChunkHolder { get => terrainChunkHolder;  set => terrainChunkHolder = value; }
+        public TerrainChunkHolder TerrainChunkHolder { get => terrainChunkHolder; set { terrainChunkHolder = value;
+#if UNITY_EDITOR
+                Debug.Log("Setting Dirty from TerrainChunckHolder Setter");
+                EditorUtility.SetDirty(this);
+#endif
+            }
+        }
         public TerrainNoiseHoler Terrains { get => terrains; set => terrains = value; }
         public TerrainSettings TerrainSettings { get=>terrainSettings; set=>terrainSettings=value; }
         public AtlasCollection WorldTilemaps { get=> worldTilemaps; set=>worldTilemaps=value; }
@@ -77,7 +72,8 @@ namespace Hexiled.World.SO
 
         [SerializeField]
         WorldEventSystem worldEventSystem;
-
+        [SerializeField]
+        VoidEventSO worldDataChanged;
         void OnEnable()
         {
             if (worldChuncks == null)
@@ -92,44 +88,13 @@ namespace Hexiled.World.SO
                     { Vector2Int.zero,new SerializableMultiArray<float>()}
                 };
             }
-            //if (TerrainSettings == null)
-            //{
-            //    TerrainSettings = (TerrainSettings)EditorGUIUtility.LoadRequired(InternalPaths.terrainSettings+"DefaultTerrianSettings"+".asset");
-            //}
-            //if (WorldTilemaps == null)
-            //{
-            //    WorldTilemaps = (WorldTilemaps)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects+"DefaultWorldTileMaps"+".asset");
-            //}
-            //if (PropertiesMaterial == null)
-            //{
-            //    PropertiesMaterial = (Material)EditorGUIUtility.LoadRequired(InternalPaths.materials+"DefaultTerrainMaterial"+".mat");
-            //}
-            //if (Palette == null)
-            //{
-            //    Palette = (Texture2D)EditorGUIUtility.LoadRequired(InternalPaths.textures+"DefaultPalette"+".png");
-            //}
-            //if (WorldMeshes == null)
-            //{
-            //    WorldMeshes = (WorldMeshes)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects+"World Mesh Container"+".asset");
-            //}
-            //if (MesheHolder == null)
-            //{
-            //    MesheHolder = new MeshesHolder();
-            //}
-            //if (MapPrefabsContainer == null)
-            //{
-            //    MapPrefabsContainer = (MapPrefabsContainer)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects+"MapPrefabsContainer"+".asset");
-            //}
-            //if (terrainChunkHolder == null)
-            //{
-            //    terrainChunkHolder = new TerrainChunkHolder() {
-            //        { Vector2Int.zero,new SerializableMultiArray<TerrainTileData>() }
-            //    };
-            //}
-            //if (WorldDataChanged == null)
-            //{
-            //    WorldDataChanged = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents+"worldDataChanged"+".asset");
-            //}
+            if (terrainChunkHolder == null)
+            {
+                terrainChunkHolder = new TerrainChunkHolder() {
+                    { Vector2Int.zero,new SerializableMultiArray<TerrainTileData>()}
+                };
+            }
+            
             if (tileHeightHolder == null)
             {
                 tileHeightHolder = new ChunkHeightHolder()
@@ -185,7 +150,8 @@ namespace Hexiled.World.SO
         void OnValidate() { UnityEditor.EditorApplication.delayCall += MyOnValidate; }
         void MyOnValidate()
         {
-               WorldEventSystem.worldDataChanged?.Invoke();
+            EditorUtility.SetDirty(this);
+               worldDataChanged.Event.Invoke();
             UnityEditor.EditorApplication.delayCall -= MyOnValidate;
         }
 #endif
