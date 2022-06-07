@@ -23,3 +23,7 @@ MonoBehaviour:
     text: 'Color '
   - Texture: {fileID: 2800000, guid: 7c5f61f5284ed42ef97f7b0e527d1349, type: 3}
     text: Pattern
+  - Texture: {fileID: 2800000, guid: e17bbb27734d745a0832af6b9f7095a9, type: 3}
+    text: Map Operations
+  - Texture: {fileID: 2800000, guid: 27cb1544ed2434b83a84bf850b2619a8, type: 3}
+    text: Set Height

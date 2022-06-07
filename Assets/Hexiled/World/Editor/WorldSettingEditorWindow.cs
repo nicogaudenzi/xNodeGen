@@ -31,25 +31,6 @@ public class WorldSettingEditorWindow : EditorWindow
 
     private void OnEnable()
     {
-        //if (wdc == null)
-        //    wdc = (WorldDataContainer)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects + "World Data Container" + ".asset");
-        //if (settingEventHandler == null)
-        //    settingEventHandler = (BoolSO)EditorGUIUtility.LoadRequired(InternalPaths.boolSOs + "SettigsEventHandler" + ".asset");
-        //if (editorBar == null)
-        //    editorBar = (IntSO)EditorGUIUtility.LoadRequired(InternalPaths.intSOs + "WorldSettingsBar" + ".asset");
-        //if (opState == null)
-        //    opState = (OperationsState)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects + "Operations State" + ".asset");
-        //if (layerVisibilityChanged == null)
-        //    layerVisibilityChanged = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "askedForTileRepaint" + ".asset");
-        //if (LayersChanged == null)
-        //    LayersChanged = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "LayersChanged" + ".asset");
-        //if (ChunckChanged == null)
-        //    ChunckChanged = (Vector3Event)EditorGUIUtility.LoadRequired(InternalPaths.vector3events + "ChunkChanged" + ".asset");
-        //if (selectedChunk == null)
-        //    selectedChunk = (Vector3SO)EditorGUIUtility.LoadRequired(InternalPaths.vector3SOs + "SelectedChunk" + ".asset");
-        //if (worldDataChanged == null)
-        //    worldDataChanged = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "worldDataChanged" + ".asset");
-
         LayersChanged.Event.AddListener(Repaint);
         ChunckChanged.Event.AddListener(UpdateLayerVisibility);
         worldDataChanged.Event.AddListener(UpdateLayerVisibility);
@@ -144,18 +125,13 @@ public class WorldSettingEditorWindow : EditorWindow
     void RecycleGeneralEditor()
     {
         if (generalEditor != null) DestroyImmediate(generalEditor);
-        //Editor.CreateEditor()
         generalEditor = Editor.CreateEditor(settingEventHandler, typeof(WorldGeneralEditor)) as WorldGeneralEditor;
 
-        //generalEditor.SettingEventHandler = SettingEventHandler;
-        //generalEditor.WorldData = worldData;
     }
     void RecycleLayerOpsEditor()
     {
         if (layerOpsEditor != null) DestroyImmediate(layerOpsEditor);
         layerOpsEditor = Editor.CreateEditor(settingEventHandler, typeof(LayerOpsEditor)) as LayerOpsEditor;
-        //layerOpsEditor.WorldData = worldData;
-        //layerOpsEditor.SettingEventHandler = SettingEventHandler;
     }
 
     void OnInspectorUpdate()

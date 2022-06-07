@@ -27,6 +27,11 @@ public class ChunckChangeHandlerEditor : Editor
     Vector3EventSO selectedChunckChanged;
     [SerializeField]
     Vector2IntSO selectedChunk;
+    [SerializeField]
+    IntSO terrainOps;
+    [SerializeField]
+    Vector2IntEventSO askForTerrainRepaint;
+
     bool changedChunk;
     Vector2Int chunkCoords;
     bool needsTileRepaint;
@@ -72,8 +77,8 @@ public class ChunckChangeHandlerEditor : Editor
             case EventType.MouseUp:
                 if (!changedChunk)
                 {
-                    //bool remove = RemoveChunk(current);
-                    //if (!remove)
+                    bool remove = RemoveChunk(current);
+                    if (!remove)
                         resolveClick.Event?.Invoke();
                 }
                 break;
@@ -119,52 +124,61 @@ public class ChunckChangeHandlerEditor : Editor
 
     bool RemoveChunk(Event e)
     {
+        if (terrainOps.Value != 5) return false;
         if (e.button == 1)
         {
             chunkCoords = new Vector2Int(Mathf.FloorToInt(markerPos.Value.x / WorldHelpers.MapSize), Mathf.FloorToInt(markerPos.Value.z / WorldHelpers.MapSize));
-
-            if ((wdc.WorldData.WorldChuncks.ContainsKey(chunkCoords) || wdc.WorldData.TerrainChunkHolder.ContainsKey(chunkCoords)) && e.type == EventType.MouseUp)
-            {
-                Vector2 offset = new Vector2(chunkCoords.x - selectedChunk.Value.x, chunkCoords.y - selectedChunk.Value.y);
-                if (offset != Vector2.zero)
-                {
-
-                    Undo.RegisterCompleteObjectUndo(wdc.WorldData, "Remove Chunk");
-                    int option = EditorUtility.DisplayDialogComplex("Remove Chunk",
-            "Which Data do you want to  Delete?",
-            "Terrain",
-            "Tilemap",
-            "Cancel");
-
-                    switch (option)
-                    {
-                        // Terrain.
-                        case 0:
-                            if (wdc.WorldData.TerrainChunkHolder.ContainsKey(chunkCoords))
-                                wdc.WorldData.TerrainChunkHolder.Remove(chunkCoords);
-
-                            break;
-
-                        // Tilemap.
-                        case 1:
-                            if (wdc.WorldData.WorldChuncks.ContainsKey(chunkCoords))
-                                wdc.WorldData.RemoveKey(chunkCoords);
-                            break;
-
-                        // Cancel.
-                        case 2:
-                            break;
-
-                        default:
-                            Debug.LogError("Unrecognized option.");
-                            break;
-                    }
-                    EditorUtility.SetDirty(wdc.WorldData);
-                    AssetDatabase.SaveAssets();
-                    return true;
-                }
-            }
+            wdc.WorldData.DeleteTerrainKey(chunkCoords);
+            askForTerrainRepaint.Event.Invoke(chunkCoords);
+            EditorUtility.SetDirty(wdc.WorldData);
+            return true;
         }
+        //if (e.button == 1)
+        //{
+        //    chunkCoords = new Vector2Int(Mathf.FloorToInt(markerPos.Value.x / WorldHelpers.MapSize), Mathf.FloorToInt(markerPos.Value.z / WorldHelpers.MapSize));
+
+        //    if ((wdc.WorldData.WorldChuncks.ContainsKey(chunkCoords) || wdc.WorldData.TerrainChunkHolder.ContainsKey(chunkCoords)) && e.type == EventType.MouseUp)
+        //    {
+        //        Vector2 offset = new Vector2(chunkCoords.x - selectedChunk.Value.x, chunkCoords.y - selectedChunk.Value.y);
+        //        if (offset != Vector2.zero)
+        //        {
+
+        //            Undo.RegisterCompleteObjectUndo(wdc.WorldData, "Remove Chunk");
+        //            int option = EditorUtility.DisplayDialogComplex("Remove Chunk",
+        //    "Which Data do you want to  Delete?",
+        //    "Terrain",
+        //    "Tilemap",
+        //    "Cancel");
+
+        //            switch (option)
+        //            {
+        //                // Terrain.
+        //                case 0:
+        //                    if (wdc.WorldData.TerrainChunkHolder.ContainsKey(chunkCoords))
+        //                        wdc.WorldData.TerrainChunkHolder.Remove(chunkCoords);
+
+        //                    break;
+
+        //                // Tilemap.
+        //                case 1:
+        //                    if (wdc.WorldData.WorldChuncks.ContainsKey(chunkCoords))
+        //                        wdc.WorldData.RemoveKey(chunkCoords);
+        //                    break;
+
+        //                // Cancel.
+        //                case 2:
+        //                    break;
+
+        //                default:
+        //                    Debug.LogError("Unrecognized option.");
+        //                    break;
+        //            }
+        //            EditorUtility.SetDirty(wdc.WorldData);
+        //            AssetDatabase.SaveAssets();
+        //            return true;
+        //        }
+        //    }
+        //}
         return false;
     }
 

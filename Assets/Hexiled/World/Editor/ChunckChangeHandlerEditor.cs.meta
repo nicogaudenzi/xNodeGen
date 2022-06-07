@@ -14,6 +14,8 @@ MonoImporter:
   - resolveClick: {fileID: 11400000, guid: 9301966a37a4b4029b77f44196b75cbf, type: 2}
   - selectedChunckChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   - selectedChunk: {fileID: 11400000, guid: ff58e91337a434761a76e37f4b7e2955, type: 2}
+  - terrainOps: {fileID: 11400000, guid: f6a7c8347a6a0453095bab752acff716, type: 2}
+  - askForTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

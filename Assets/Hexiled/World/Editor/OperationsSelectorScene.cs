@@ -45,6 +45,8 @@ namespace Hexiled.World.Editor
         BoolSO useColorWhilePattern;
         [SerializeField]
         BoolSO useGeometryWhilePattern;
+        [SerializeField]
+        FloatSO heightModifier;
         private void OnEnable()
         {
 
@@ -89,20 +91,18 @@ namespace Hexiled.World.Editor
 
         void DrawTerrainOps()
         {
-            GUILayout.BeginArea(new Rect(Screen.width * .2f, Screen.height * 0, 400, 36));
+            GUILayout.BeginArea(new Rect(Screen.width * .2f, Screen.height * 0, 300, 140));
             GUILayout.FlexibleSpace();
             GUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
             terrainOps.Value = GUILayout.Toolbar(terrainOps.Value, terrainEditorTips.GuiContentArray());
+            
+            GUILayout.FlexibleSpace();
 
-            GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
-            GUILayout.FlexibleSpace();
-            GUILayout.EndArea();
-            GUILayout.BeginArea(new Rect(Screen.width * .3f, 38, 200, 100));
             GUILayout.BeginVertical();
             brushProfile.Value = EditorGUILayout.CurveField("BrushCurve", brushProfile.Value);
-            brushStrength.Value = GUILayout.HorizontalSlider(brushStrength.Value, 0, 2, GUILayout.Height(16));
+            brushStrength.Value = GUILayout.HorizontalSlider(brushStrength.Value, 0, 20, GUILayout.Height(16));
             if (terrainOps.Value == 3)
             {
                 color.Value = EditorGUILayout.GradientField("Color", color.Value);
@@ -113,8 +113,14 @@ namespace Hexiled.World.Editor
                 useGeometryWhilePattern.Value = EditorGUILayout.Toggle("Change Height", useGeometryWhilePattern.Value);
                 useColorWhilePattern.Value = EditorGUILayout.Toggle("Change Color", useColorWhilePattern.Value);
             }
-            GUILayout.EndVertical();
+            if (terrainOps.Value == 6)
+            {
+                heightModifier.Value = EditorGUILayout.FloatField("Height", heightModifier.Value);
+            }
+                GUILayout.EndVertical();
+            GUILayout.FlexibleSpace();
             GUILayout.EndArea();
+            
                
         }
         void DrawTileEditorOps()

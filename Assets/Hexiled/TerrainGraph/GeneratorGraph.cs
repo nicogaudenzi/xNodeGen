@@ -29,9 +29,21 @@ public Generator GetEndGenerator()
             if (n is EndNode)
             {
                 return ((EndNode) n).GetColors();
-}
+            }
         }
 
         return null;
     }
-   }
+    public Generator GetUnprocessedNoise()
+    {
+        foreach (Node n in nodes)
+        {
+            if (n is EndNode)
+            {
+                return ((EndNode)n).GetUnprocessedNoise().GetGenerator();
+            }
+        }
+
+        return null;
+    }
+}

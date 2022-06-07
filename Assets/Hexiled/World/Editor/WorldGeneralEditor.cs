@@ -28,38 +28,7 @@ public class WorldGeneralEditor : Editor
     BuildTargetGroup group;
     private void OnEnable()
     {
-        //if (wdc == null)
-        //    wdc = (WorldDataContainer)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects + "World Data Container" + ".asset");
-        //if (LOD == null)
-        //    LOD = (IntSO)EditorGUIUtility.LoadRequired(InternalPaths.intSOs + "LOD" + ".asset");
-        //if (worldDataChanged == null)
-        //    worldDataChanged = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "worldDataChanged" + ".asset");
-        //if (finishedEdition == null)
-        //    finishedEdition = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "FinishedEdition" + ".asset");
-        //if (askToBake == null)
-        //    askToBake = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "AskBakeMesh" + ".asset");
-        //if (askToBakeMeshes == null)
-        //    askToBakeMeshes = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "AskBakeCombinedMeshes" + ".asset");
-
-        //if (askToInstanciate == null)
-        //    askToInstanciate = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "askInstanciateBakedMesh" + ".asset");
-        //if (askToBakeCollider == null)
-        //    askToBakeCollider = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "AskBakeCollider" + ".asset");
-        //if (askToInstanciateCollider == null)
-        //    askToInstanciateCollider = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "AskedInstanciateCollider" + ".asset");
-        //if (combineMeshes == null)
-        //    combineMeshes = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "CombineMeshes" + ".asset");
-        //if (LODChanged == null)
-        //    LODChanged = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "LODChanged" + ".asset");
-        //if (selectedChunk == null)
-        //    selectedChunk = (Vector3SO)EditorGUIUtility.LoadRequired(InternalPaths.vector3SOs + "SelectedChunk" + ".asset");
-        //if (bwd == null)
-        //    bwd = (BakedWorldData)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects + "Baked World Data" + ".asset");
-        //if (opState == null)
-        //    opState = (OperationsState)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects + "Operations State" + ".asset");
-        //if (askMeshRepaint == null)
-        //    askMeshRepaint = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents + "askMeshesRender" + ".asset");
-
+       
         buildtarget = EditorUserBuildSettings.activeBuildTarget;
         group = BuildPipeline.GetBuildTargetGroup(buildtarget);
        

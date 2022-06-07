@@ -38,40 +38,7 @@ public class BrushTypeSceneSelector : Editor
     VoidEventSO brushSelectionChanged;
     private void OnEnable()
     {
-        
-        //if (wdc == null)
-        //    wdc = (WorldDataContainer)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects+"World Data Container"+".asset");
-        //if (selectedChunk == null)
-        //    selectedChunk = (Vector3Variable)EditorGUIUtility.LoadRequired(InternalPaths.vector3variables+"SelectedChunk"+".asset");
-        //if (chunckChanged == null)
-        //    chunckChanged = (Vector3Event)EditorGUIUtility.LoadRequired(InternalPaths.vector3events+"ChunkChanged"+".asset");
-        //if (fillConditions == null)
-        //    fillConditions = (FillConditionsCheck)EditorGUIUtility.LoadRequired(InternalPaths.stateObjects+ "FillConditionsCheck" + ".asset");
-        //if (editorMode == null)
-        //    editorMode = (IntVariable)EditorGUIUtility.LoadRequired(InternalPaths.intvariables+"EditorMode"+".asset");
-        //if (terrainBrushTips == null)
-        //    terrainBrushTips = (GUIArrayVariable)EditorGUIUtility.LoadRequired(InternalPaths.icons+"TerrainTypeTips"+".asset");
-        //if (editorModeTips == null)
-        //    editorModeTips = (GUIArrayVariable)EditorGUIUtility.LoadRequired(InternalPaths.icons+"editor Mode Tips"+".asset");
-        //if (brushTypeSelected == null)
-        //    brushTypeSelected = (IntVariable)EditorGUIUtility.LoadRequired(InternalPaths.intvariables+"BrushTypeSelect"+".asset");
-        //if (brushTypeTips == null)
-        //    brushTypeTips = (GUIArrayVariable)EditorGUIUtility.LoadRequired(InternalPaths.icons+"BrushTypeTips"+".asset");
-        //if (useCircleVoxelBrush == null)
-        //    useCircleVoxelBrush = (BoolVariable)EditorGUIUtility.LoadRequired(InternalPaths.boolvariables+"UseCircleBrush"+".asset");
-        //if (brushSize == null)
-        //    brushSize = (IntVariable)EditorGUIUtility.LoadRequired(InternalPaths.intvariables+"BrushSize"+".asset");
-        //if (voxelOptions == null)
-        //    voxelOptions = (GUIArrayVariable)EditorGUIUtility.LoadRequired(InternalPaths.icons+"VoxelOptions"+".asset");
-        //if (fillTips == null)
-        //    fillTips = (GUIArrayVariable)EditorGUIUtility.LoadRequired(InternalPaths.icons+"FillTips"+".asset");
-        //if (terrainVisivility == null)
-        //    terrainVisivility = (BoolVariable)EditorGUIUtility.LoadRequired(InternalPaths.boolvariables+"TerrainVisible"+".asset");
-        //if (terrainVisibilityChanged == null)
-        //    terrainVisibilityChanged = (BoolEvent)EditorGUIUtility.LoadRequired(InternalPaths.boolevents+"TerrainVisibilityChanged"+".asset");
-        //if (brushSelectionChanged == null)
-        //    brushSelectionChanged = (VoidEvent)EditorGUIUtility.LoadRequired(InternalPaths.voidevents+"brushSelectionChanged"+".asset");
-        
+    
         terrainVisibilityChanged.Event.AddListener(OnTerraiVisibilityChanged);
         chunckChanged.Event.AddListener(OnCunckChanged);
         if (Application.isPlaying) return;

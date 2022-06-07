@@ -118,6 +118,13 @@ MonoBehaviour:
   chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
   askTerrainRepaint: {fileID: 0}
+  TerrainSettingsChanged: {fileID: 0}
+  FinishedEdition: {fileID: 0}
+  worldDataChanged: {fileID: 0}
+  rePaintTerrain: {fileID: 0}
+  LODChanged: {fileID: 0}
+  AutoUpdateChanged: {fileID: 0}
+  terrainVisibilityChanged: {fileID: 0}
   offset: {x: 0, y: 0}
   heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   resolution: 32

@@ -46,6 +46,10 @@ namespace Hexiled.World.Editor
         BoolSO useColorWhilePattern;
         [SerializeField]
         BoolSO useGeometryWhilePattern;
+        [SerializeField]
+        FloatSO heightModifier;
+        [SerializeField]
+        GeneratorGraph generatorGraph;
         private void OnEnable()
         {
             chunksToRepaint = new List<Vector2Int>();
@@ -217,20 +221,86 @@ namespace Hexiled.World.Editor
                                     wdc.WorldData.TerrainChunkHolder.Add(chunk, new SerializableMultiArray<TerrainTileData>());
                                 if (opState.UseCircleVoxelBrush.Value)
                                 {
-                                    if (new Vector2(i, j).SqrMagnitude() < (brushextend) * (brushextend) + .1f)
+                                    if (current.button == 0)
                                     {
+                                        if (new Vector2(i, j).SqrMagnitude() < (brushextend) * (brushextend) + .1f)
+                                        {
                                             if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
-                                            ApplyGraph(pos.x, pos.y, pos.z, chunk, pos.x,pos.z,_colors,_height.GetValue(pos.x,pos.y,pos.z));
-                                     }                                    
+                                            ApplyGraph(pos.x, pos.y, pos.z, chunk, pos.x, pos.z, _colors, _height.GetValue(pos.x, pos.y, pos.z));
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (new Vector2(i, j).SqrMagnitude() < (brushextend) * (brushextend) + .1f)
+                                        {
+                                            if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
+                                            RemoveGraph(pos.x, pos.y, pos.z, chunk);
+                                        }
+                                    }
                                 }
                                 else
                                 {
+                                    if (current.button == 0)
+                                    {
                                         if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
-                                        ApplyGraph(pos.x, pos.y, pos.z, chunk, pos.x, pos.z,_colors, _height.GetValue(pos.x, pos.y, pos.z));
+                                        ApplyGraph(pos.x, pos.y, pos.z, chunk, pos.x, pos.z, _colors, _height.GetValue(pos.x, pos.y, pos.z));
+                                    }
+                                    else
+                                    {
+                                        if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
+                                        RemoveGraph(pos.x, pos.y, pos.z, chunk);
+                                    }
                                 }
                             }
                         }
                     }
+                    //Flatten
+                    else if (terrainOps.Value == 6)
+                    {
+                        Vector3Int res = markerPos.Value.FloorToInt();
+                        ChunkInfo ci = res.ChunkInfoFromPos();
+                        Vector2Int chunk = ci.chunk;
+                        Vector3Int pos = ci.pos;
+                        Generator preHeights = generatorGraph.GetUnprocessedNoise();
+
+                        if (current.button == 1)
+                        {
+                            heightModifier.Value = preHeights.GetValue(pos.x, pos.y, pos.z);
+                            return;
+                        }
+                        for (int i = -brushextend; i < brushextend + 1; i++)
+                        {
+                            for (int j = -brushextend; j < brushextend + 1; j++)
+                            {
+                                Vector3Int _res = markerPos.Value.FloorToInt() + new Vector3Int(i, 0, j);
+                                ChunkInfo _ci = _res.ChunkInfoFromPos();
+                                Vector2Int _chunk = _ci.chunk;
+                                Vector3Int _pos = _ci.pos;
+                                if (!chunksToRepaint.Contains(_chunk)) chunksToRepaint.Add(_chunk);
+                                if (!wdc.WorldData.TerrainChunkHolder.ContainsKey(_chunk))
+                                    wdc.WorldData.TerrainChunkHolder.Add(_chunk, new SerializableMultiArray<TerrainTileData>());
+                                if (opState.UseCircleVoxelBrush.Value)
+                                {
+                                    if (new Vector2(i, j).SqrMagnitude() < (brushextend) * (brushextend) + .1f)
+                                    {
+                                        if (current.button == 0)
+                                        {
+                                            wdc.WorldData.TerrainChunkHolder[_chunk][_pos.x, _pos.y, _pos.z].h = heightModifier.Value -preHeights.GetValue(pos.x , pos.y, pos.z );
+                                        }
+                                    }
+                                    
+                                }
+                                else
+                                {
+                                    if (current.button == 0)
+                                    {
+                                        wdc.WorldData.TerrainChunkHolder[_chunk][_pos.x, _pos.y, _pos.z].h = heightModifier.Value - preHeights.GetValue(pos.x , pos.y, pos.z );
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     else
                     {
                         for (int i = -brushextend; i < brushextend + 1; i++)
@@ -248,6 +318,7 @@ namespace Hexiled.World.Editor
                                 float profileDistY = Mathf.Abs(j) / (float)(brushextend);
                                 float strength = new Vector2(profileDistX, profileDistY).magnitude;
                                 strength = brushProfile.Value.Evaluate(1 - strength);
+                                if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
 
                                 if (opState.UseCircleVoxelBrush.Value)
                                 {
@@ -256,13 +327,11 @@ namespace Hexiled.World.Editor
 
                                         if (current.button == 1)
                                         {
-                                            if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
 
                                             terrainErase(pos.x, pos.y, pos.z, chunk);
                                         }
                                         else if (current.button == 0)
                                         {
-                                            if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
 
                                             terrainAttach(pos.x, pos.y, pos.z, chunk, strength);
                                         }
@@ -272,18 +341,11 @@ namespace Hexiled.World.Editor
                                 {
                                     if (current.button == 0)
                                     {
-                                        if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
-
-
                                         terrainAttach(pos.x, pos.y, pos.z, chunk, strength);
-
                                     }
                                     else
                                     {
-                                        if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
-
                                         terrainErase(pos.x, pos.y, pos.z, chunk);
-
                                     }
                                 }
                             }
@@ -400,23 +462,35 @@ namespace Hexiled.World.Editor
                 case 3:
                     ChangeColor(_x, _y, _z, v, strength);
                     break;
+                case 5:
+                    wdc.WorldData.AddTerrainKey(v);
+                    break;
             }
 
         }
         void ApplyGraph(int _x, int _y, int _z, Vector2Int v, int i, int j,SerializableMultiArray<Color> _colors, float  _height)
         {
-            Vector3Int origin = markerPos.Value.FloorToInt();
             if(useGeometryWhilePattern.Value)
                 wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].h = _height;
             if (useColorWhilePattern.Value)
                 wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color = _colors[i, 0, j];
         }
+        void RemoveGraph(int _x, int _y, int _z, Vector2Int v)
+        {
+            if (useGeometryWhilePattern.Value)
+                wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].h = 0;
+            if (useColorWhilePattern.Value)
+            {
+                wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color = Color.black;
+                wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color.a = 0;
+            }
+        }
         void ChangeColor(int _x, int _y, int _z, Vector2Int v, float strength)
         {
             Color c = color.Value.Evaluate(strength); 
-            float factor = 1 - strength * brushStength.Value / 2f;
+            float factor = 1-strength * brushStength.Value / 2f;
             c.a = factor;
-                wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color= c;
+            wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color= c;
         }
         void meanAttach(int _x, int _y, int _z, Vector2Int v, float mean)
         {
@@ -492,6 +566,7 @@ namespace Hexiled.World.Editor
             int sign = mean > h ? 1 : -1;
             wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].h -= .1f * sign * Mathf.Abs(mean - h);
         }
+
         void terrainErase(int _x, int _y, int _z, Vector2Int v)
         {
 
@@ -505,6 +580,10 @@ namespace Hexiled.World.Editor
                     Color c = Color.black;
                     c.a = 0;
                     wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color = c;
+                    break;
+                case 4:
+                    if (wdc.WorldData.TerrainChunkHolder.Keys.Contains(v))
+                        wdc.WorldData.DeleteTerrainKey(v);
                     break;
             }
         }

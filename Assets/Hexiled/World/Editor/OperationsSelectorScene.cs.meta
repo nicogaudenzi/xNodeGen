@@ -21,6 +21,7 @@ MonoImporter:
   - brushContainer: {fileID: 11400000, guid: e149213db13134517baefc9a11072a53, type: 2}
   - useColorWhilePattern: {fileID: 11400000, guid: 0fc16da424a0849bca89aef64411b728, type: 2}
   - useGeometryWhilePattern: {fileID: 11400000, guid: fd0b48f83798e49e589b01145e6883ed, type: 2}
+  - heightModifier: {fileID: 11400000, guid: 1b8fe118f082e43e78ac897ee6df7072, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

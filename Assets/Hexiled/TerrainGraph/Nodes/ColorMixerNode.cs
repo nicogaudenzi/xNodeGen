@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using XNode;
 using Hexiled.World.Data;
@@ -11,7 +9,7 @@ public class ColorMixerNode : Node
     [Output(ShowBackingValue.Never, ConnectionType.Override)] public SerializableMultiArray<Color> Colors;
 	SerializableMultiArray<Color> colors;
 	public Operation operation = Operation.Add;
-	public enum Operation { Replace,Mix, Add, Subtract, Multiply,Divide}
+	public enum Operation { Replace,Mix, Add, Subtract, Multiply}
 	void FillColors()
 	{
 		var colNode1 = GetInputValue<SerializableMultiArray<Color>>("Color1");
@@ -29,6 +27,15 @@ public class ColorMixerNode : Node
 						break;
 					case Operation.Mix:
 						colors[i, 0, j] = colNode1[i, 0, j].a == 0?colNode2[i,0,j]:Color.Lerp(colNode1[i, 0, j], colNode2[i, 0, j], colNode1[i,0,j].a);
+						break;
+					case Operation.Add:
+						colors[i, 0, j] = colNode1[i, 0, j] + colNode2[i, 0, j];
+						break;
+					case Operation.Subtract:
+						colors[i, 0, j] = colNode1[i, 0, j] - colNode2[i, 0, j];
+						break;
+					case Operation.Multiply:
+						colors[i, 0, j] = colNode1[i, 0, j] * colNode2[i, 0, j];
 						break;
 				}
 			}

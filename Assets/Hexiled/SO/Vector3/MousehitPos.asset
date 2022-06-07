@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d568fdc6b2d4f4842a2e9ca110e15141, type: 3}
   m_Name: MousehitPos
   m_EditorClassIdentifier: 
-  _value: {x: -31.819355, y: 0, z: -122.731415}
+  _value: {x: -1.755352, y: 0, z: -10.316917}
