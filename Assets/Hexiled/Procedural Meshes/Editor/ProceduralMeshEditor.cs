@@ -12,7 +12,6 @@ public class ProceduralMeshEditor : Editor
     private void OnEnable()
     {
         pm = (ProceduralMesh)target;
-        //pm.chunkChanged.Event.AddListener(pm.OnChunckChanged);
     }
     public override void OnInspectorGUI()
     {

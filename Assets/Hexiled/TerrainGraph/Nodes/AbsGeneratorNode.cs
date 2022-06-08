@@ -96,6 +96,10 @@ public abstract class AbsGeneratorNode : XNode.Node
 	/// </summary>
 	/// <returns>Generator</returns>
 	public abstract Generator GetGenerator();
+	public virtual Generator GetGenerator(Vector2Int v)
+    {
+		return GetGenerator();
+    }
 
 	/// <summary>
 	/// Gets the name of this node to display in the 

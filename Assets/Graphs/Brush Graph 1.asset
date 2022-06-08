@@ -18,6 +18,7 @@ MonoBehaviour:
     keys:
     - Noise
     - Colors
+    - unProccessedNoise
     values:
     - _fieldName: Noise
       _node: {fileID: -8159977055969936369}
@@ -40,6 +41,15 @@ MonoBehaviour:
       - fieldName: Colors
         node: {fileID: 5173278626982924591}
         reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unProccessedNoise
+      _node: {fileID: -8159977055969936369}
+      _typeQualifiedName: AbsGeneratorNode, Hexiled.GenGraph, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
       _direction: 0
       _connectionType: 1
       _typeConstraint: 0
@@ -1105,6 +1115,7 @@ MonoBehaviour:
         - {r: 0, g: 0, b: 0, a: 0}
         - {r: 0, g: 0, b: 0, a: 0}
     mapHeight: 1
+  unProccessedNoise: {fileID: 0}
 --- !u!114 &-5983486495005108352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1134,7 @@ MonoBehaviour:
     keys:
     - Offset
     - Output
+    - CurrentChunk
     values:
     - _fieldName: Offset
       _node: {fileID: -5983486495005108352}
@@ -1148,6 +1160,15 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: CurrentChunk
+      _node: {fileID: -5983486495005108352}
+      _typeQualifiedName: UnityEngine.Vector2Int, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   Output: {fileID: 0}
   mapSize: 32
   seed: 8
@@ -1156,6 +1177,7 @@ MonoBehaviour:
   persistence: 0.57
   lacunarity: 1.77
   Offset: {x: 0, y: 0}
+  CurrentChunk: {x: 0, y: 0}
   computeShader: {fileID: 7200000, guid: dcc1f1d331db3429681c86093e9c82b6, type: 3}
 --- !u!114 &-5216697634073299987
 MonoBehaviour:
@@ -2327,21 +2349,21 @@ MonoBehaviour:
     mapHeight: 1
   gradient:
     serializedVersion: 2
-    key0: {r: 0.5754717, g: 0.52932537, b: 0.52932537, a: 1}
-    key1: {r: 0.754717, g: 0.7084372, b: 0.66571736, a: 1}
-    key2: {r: 0.6792453, g: 0.62485665, b: 0.5735137, a: 1}
-    key3: {r: 0.38679248, g: 0.36567652, b: 0.34118018, a: 0}
+    key0: {r: 0.06906088, g: 0.3584906, b: 0.06594875, a: 1}
+    key1: {r: 0.7585547, g: 0.9622642, b: 0.21333215, a: 1}
+    key2: {r: 0.14222142, g: 0.6415094, b: 0.32800296, a: 1}
+    key3: {r: 0.39215687, g: 0.85882354, b: 0.4743599, a: 0}
     key4: {r: 0.3015025, g: 0.7921569, b: 0.07843135, a: 0}
-    key5: {r: 0.5195758, g: 0.8396226, b: 0.2415895, a: 0}
-    key6: {r: 0.09451604, g: 1, b: 0, a: 0}
+    key5: {r: 0.6509804, g: 0.08235295, b: 0.5221578, a: 0}
+    key6: {r: 0.5195758, g: 0.8396226, b: 0.2415895, a: 0}
     key7: {r: 0.09451604, g: 1, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 8481
-    ctime2: 48380
-    ctime3: 65535
+    ctime0: 11758
+    ctime1: 16384
+    ctime2: 25829
+    ctime3: 34502
     ctime4: 44718
-    ctime5: 58018
-    ctime6: 65535
+    ctime5: 49344
+    ctime6: 58018
     ctime7: 65535
     atime0: 0
     atime1: 10216
@@ -2352,7 +2374,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 4
+    m_NumColorKeys: 8
     m_NumAlphaKeys: 3
   heightMultiplier: 0.09
   heightCurve:
@@ -2360,7 +2382,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: -0.00023710728
-      value: 0.3305421
+      value: 0.032357633
       inSlope: 0
       outSlope: 0
       tangentMode: 34
@@ -2369,7 +2391,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.9997629
-      value: 0.3305421
+      value: 0.032357633
       inSlope: 0
       outSlope: 0
       tangentMode: 34

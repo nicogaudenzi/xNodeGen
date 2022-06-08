@@ -50,11 +50,12 @@ namespace Hexiled.World.Editor
         FloatSO heightModifier;
         [SerializeField]
         GeneratorGraph generatorGraph;
+        Dictionary<Vector2Int, Generator> generators;
         private void OnEnable()
         {
             chunksToRepaint = new List<Vector2Int>();
             teh = (TerrainEventHandler)this.target;
-         
+            generators = new Dictionary<Vector2Int, Generator>();
             if (Application.isPlaying) return;
             SceneView.duringSceneGui += duringScene;
             Selection.selectionChanged += OnSelectionChanged;
@@ -103,6 +104,7 @@ namespace Hexiled.World.Editor
                     askTerrainRepaint.Event.Invoke(v);
 
                 }
+                generators.Clear();
                 chunksToRepaint.Clear();
             }
         }
@@ -261,11 +263,14 @@ namespace Hexiled.World.Editor
                         ChunkInfo ci = res.ChunkInfoFromPos();
                         Vector2Int chunk = ci.chunk;
                         Vector3Int pos = ci.pos;
-                        Generator preHeights = generatorGraph.GetUnprocessedNoise();
-
+                        
                         if (current.button == 1)
-                        {
-                            heightModifier.Value = preHeights.GetValue(pos.x, pos.y, pos.z);
+                        { 
+                            if(!wdc.WorldData.TerrainChunkHolder.ContainsKey(chunk))return;
+                            if (!generators.ContainsKey(chunk))
+                                generators.Add(chunk, generatorGraph.GetUnprocessedNoise(chunk));
+
+                            heightModifier.Value = wdc.WorldData.TerrainChunkHolder[chunk][pos.x,pos.y,pos.z].h+generators[chunk].GetValue(pos.x, pos.y, pos.z);
                             return;
                         }
                         for (int i = -brushextend; i < brushextend + 1; i++)
@@ -276,6 +281,8 @@ namespace Hexiled.World.Editor
                                 ChunkInfo _ci = _res.ChunkInfoFromPos();
                                 Vector2Int _chunk = _ci.chunk;
                                 Vector3Int _pos = _ci.pos;
+                                if (!generators.ContainsKey(_chunk))
+                                    generators.Add(_chunk, generatorGraph.GetUnprocessedNoise(_chunk));
                                 if (!chunksToRepaint.Contains(_chunk)) chunksToRepaint.Add(_chunk);
                                 if (!wdc.WorldData.TerrainChunkHolder.ContainsKey(_chunk))
                                     wdc.WorldData.TerrainChunkHolder.Add(_chunk, new SerializableMultiArray<TerrainTileData>());
@@ -285,7 +292,7 @@ namespace Hexiled.World.Editor
                                     {
                                         if (current.button == 0)
                                         {
-                                            wdc.WorldData.TerrainChunkHolder[_chunk][_pos.x, _pos.y, _pos.z].h = heightModifier.Value -preHeights.GetValue(pos.x , pos.y, pos.z );
+                                            wdc.WorldData.TerrainChunkHolder[_chunk][_pos.x, _pos.y, _pos.z].h = heightModifier.Value -generators[_chunk].GetValue(_pos.x , _pos.y, _pos.z );
                                         }
                                     }
                                     
@@ -294,7 +301,7 @@ namespace Hexiled.World.Editor
                                 {
                                     if (current.button == 0)
                                     {
-                                        wdc.WorldData.TerrainChunkHolder[_chunk][_pos.x, _pos.y, _pos.z].h = heightModifier.Value - preHeights.GetValue(pos.x , pos.y, pos.z );
+                                        wdc.WorldData.TerrainChunkHolder[_chunk][_pos.x, _pos.y, _pos.z].h = heightModifier.Value - generators[_chunk].GetValue(_pos.x, _pos.y, _pos.z); ;
                                     }
                                 }
                             }

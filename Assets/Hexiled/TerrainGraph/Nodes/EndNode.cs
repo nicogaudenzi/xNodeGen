@@ -5,15 +5,15 @@ public class EndNode : XNode.Node
 {
 	[Input(ShowBackingValue.Never, ConnectionType.Override)] public AbsGeneratorNode Noise;
 	[Input(ShowBackingValue.Never, ConnectionType.Override)] public SerializableMultiArray<Color> Colors;
-	[Input(ShowBackingValue.Never, ConnectionType.Override)] public SerializableMultiArray<float> unProccessedNoise;
+	[Input(ShowBackingValue.Never, ConnectionType.Override)] public AbsGeneratorNode unProccessedNoise;
 
 	public SerializableMultiArray<Color> GetColors()
     {
 		return GetInputValue<SerializableMultiArray<Color>>("Colors");
 	}
-	public AbsGeneratorNode GetUnprocessedNoise()
+	public Generator GetUnprocessedNoise(Vector2Int v)
 	{
-		return GetInputValue<AbsGeneratorNode>("unProccessedNoise");
+		return GetInputValue<AbsGeneratorNode>("unProccessedNoise").GetGenerator(v);
 	}
 	/// <summary>
 	/// Returns the "final" generator attached to this 

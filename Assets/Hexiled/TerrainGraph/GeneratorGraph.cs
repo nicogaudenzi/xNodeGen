@@ -34,13 +34,13 @@ public Generator GetEndGenerator()
 
         return null;
     }
-    public Generator GetUnprocessedNoise()
+    public Generator GetUnprocessedNoise(Vector2Int v)
     {
         foreach (Node n in nodes)
         {
             if (n is EndNode)
             {
-                return ((EndNode)n).GetUnprocessedNoise().GetGenerator();
+                return ((EndNode)n).GetUnprocessedNoise(v);
             }
         }
 

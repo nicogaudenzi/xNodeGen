@@ -9,7 +9,7 @@ public class fbmGPUNode:AbsGeneratorNode
     public int mapSize,seed,numOctaves, initialScale;
     public float persistence, lacunarity;
     [Input] public Vector2Int Offset;
-
+    [Input] public Vector2Int CurrentChunk;
     public ComputeShader computeShader;
     fbmGPUGenerator fbmGPUgenerator;
     public override Generator GetGenerator()
@@ -21,7 +21,15 @@ public class fbmGPUNode:AbsGeneratorNode
         fbmGPUgenerator.Generate(mapSize, seed, numOctaves, persistence, lacunarity, initialScale, GetInputValue<Vector2Int>("Offset"), computeShader);
         return fbmGPUgenerator;
     }
+    public override Generator GetGenerator(Vector2Int v)
+    {
 
+        //if(fbmGPUgenerator==null)
+        fbmGPUgenerator = new fbmGPUGenerator(mapSize, seed, numOctaves, persistence, lacunarity, initialScale, v, computeShader);
+
+        fbmGPUgenerator.Generate(mapSize, seed, numOctaves, persistence, lacunarity, initialScale, v*32, computeShader);
+        return fbmGPUgenerator;
+    }
     public override string GetTitle()
     {
         return "fbmGPU";

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac1d14cc97ce4f15a7db4020a5e2f30, type: 3}
   m_Name: BrushContainer
   m_EditorClassIdentifier: 
-  _value: {fileID: 11400000, guid: 03ea32151110f4fbeb65a8c298265d6f, type: 2}
+  _value: {fileID: 11400000, guid: 7df385132ccc843d18a470c43aa06336, type: 2}

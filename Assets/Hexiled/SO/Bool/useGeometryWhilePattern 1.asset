@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0f699429f1a403a857229a1246de80, type: 3}
   m_Name: useGeometryWhilePattern 1
   m_EditorClassIdentifier: 
-  _value: 1
+  _value: 0

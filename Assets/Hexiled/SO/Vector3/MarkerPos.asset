@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d568fdc6b2d4f4842a2e9ca110e15141, type: 3}
   m_Name: MarkerPos
   m_EditorClassIdentifier: 
-  _value: {x: -2, y: 0, z: -10}
+  _value: {x: 65, y: 0, z: -31}

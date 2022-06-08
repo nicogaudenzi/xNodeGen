@@ -10,6 +10,13 @@ MonoImporter:
   - chunkChanged: {fileID: 11400000, guid: 03c98190b39664f67875402d8fd280fa, type: 2}
   - graphChanged: {fileID: 11400000, guid: 0f641495cfab1409e9c1ba1d25e7edc3, type: 2}
   - askTerrainRepaint: {fileID: 11400000, guid: 2eba2f2b347e84d8dbe493a8298078e0, type: 2}
+  - TerrainSettingsChanged: {fileID: 11400000, guid: 2dfc1384030cb411db38c0d9e4553d81, type: 2}
+  - FinishedEdition: {fileID: 11400000, guid: b46a3f1b5b6854af8b4c9ba356582ec4, type: 2}
+  - worldDataChanged: {fileID: 11400000, guid: d8428854ab8504ab9a23e0353ed73eab, type: 2}
+  - rePaintTerrain: {fileID: 11400000, guid: 59a6a9f21078b4ba0b6e1701b5199b68, type: 2}
+  - LODChanged: {fileID: 11400000, guid: b85d1cdd7ac494de296f7c385f81d0bd, type: 2}
+  - AutoUpdateChanged: {fileID: 11400000, guid: a629d0312e1444b658a9899dbb95b26b, type: 2}
+  - terrainVisibilityChanged: {fileID: 11400000, guid: 696e0b30cfa5942e3b05e5a1727589cf, type: 2}
   - heightMapComputeShader: {fileID: 7200000, guid: a680ec443fc9b4600b2e5732eb675794, type: 3}
   - updateGraph: {fileID: 11400000, guid: 5efc664b0546f4a1b88a47611a17b684, type: 2}
   executionOrder: 0
