@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d429bb7adbcd4635913c1557babcaf3, type: 3}
   m_Name: OffsetInput
   m_EditorClassIdentifier: 
-  _value: {x: 32, y: 64}
+  _value: {x: -32, y: -32}

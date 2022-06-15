@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 using Unity.Collections;
 using Hexiled.World.Data;
 using Hexiled.World.SO;
@@ -164,14 +165,16 @@ namespace Hexiled.ProceduralMeshes.Components {
 			DefinedMeshJob.ScheduleParallel(
 				mesh,meshData,resolution, default, heightData
 			).Complete();
-			for (int i = 0; i < resolution; i++)
-			{
-				for (int j = 0; j < resolution; j++)
-				{
+
+            for (int i = 0; i < resolution; i++)
+            {
+                for (int j = 0; j < resolution; j++)
+                {
 					heightData[j * resolution + i] = new TileDataStruct(fGenerator.GetValue(i, 0, j) * heightMultiplier, _colors[i, 0, j]);
-				}
-			}
-			Mesh.MeshDataArray meshDataArray1 = Mesh.AllocateWritableMeshData(1);
+                }
+            }
+
+            Mesh.MeshDataArray meshDataArray1 = Mesh.AllocateWritableMeshData(1);
 			Mesh.MeshData meshData1 = meshDataArray1[0];
 
 			ColliderMeshJob.ScheduleParallel(

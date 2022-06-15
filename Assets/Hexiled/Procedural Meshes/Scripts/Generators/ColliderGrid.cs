@@ -25,7 +25,6 @@ namespace Hexiled.ProceduralMeshes.Generators
 
 		public void Execute<S>(int z, S streams) where S : struct, IMeshStreams
 		{
-
 			int vi = numberofFaces * 4 * Resolution * z, ti = numberofFaces * 2 * Resolution * z;
 			for (int x = 0; x < Resolution; x++, vi += numberofFaces * 4, ti += numberofFaces * 2)
 			{
@@ -33,7 +32,6 @@ namespace Hexiled.ProceduralMeshes.Generators
 
 				var xCoordinates = 32 * (float2(x, x + 1f) / Resolution);
 				var zCoordinates = 32 * (float2(z, z + 1f) / Resolution);
-
 				var vertex = new Vertex();
 				//Top Face
 				vertex.normal.y = 1f;

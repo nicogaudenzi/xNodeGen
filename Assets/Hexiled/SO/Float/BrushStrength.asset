@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6afb3b00d9a049a3861a8f7c8ea36c7, type: 3}
   m_Name: BrushStrength
   m_EditorClassIdentifier: 
-  _value: 13.686377
+  _value: 1.7003134

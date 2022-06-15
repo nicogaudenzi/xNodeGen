@@ -23,9 +23,10 @@ public class graphUpdateNodeEditor : NodeEditor
                 GeneratorGraph generatorGraph = gup.graph as GeneratorGraph;
                 if (generatorGraph.graphChanged != null)
                 {
+                bool preV = gup.updateGraph.Value;
                     gup.updateGraph.Value = true;
                     generatorGraph.graphChanged.Event?.Invoke();
-                    gup.updateGraph.Value = false;
+                    gup.updateGraph.Value = preV;
 
                 }
             }

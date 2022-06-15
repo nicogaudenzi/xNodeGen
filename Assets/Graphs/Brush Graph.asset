@@ -18,6 +18,7 @@ MonoBehaviour:
     keys:
     - Noise
     - Colors
+    - unProccessedNoise
     values:
     - _fieldName: Noise
       _node: {fileID: -1944604337679803936}
@@ -37,6 +38,15 @@ MonoBehaviour:
       - fieldName: Colors
         node: {fileID: 7623775002454852336}
         reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: unProccessedNoise
+      _node: {fileID: -1944604337679803936}
+      _typeQualifiedName: AbsGeneratorNode, Hexiled.GenGraph, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
       _direction: 0
       _connectionType: 1
       _typeConstraint: 0
@@ -1102,6 +1112,7 @@ MonoBehaviour:
         - {r: 0, g: 0, b: 0, a: 0}
         - {r: 0, g: 0, b: 0, a: 0}
     mapHeight: 1
+  unProccessedNoise: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1194,7 +1205,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  texture: {fileID: 2800000, guid: 039a6dfc10d3144a2b8a8998ca207408, type: 3}
+  texture: {fileID: 2800000, guid: 4a12ce75a2b8a479eb8c27b3a206f65a, type: 3}
   Offset: {x: 0, y: 0}
   Colors:
     data:

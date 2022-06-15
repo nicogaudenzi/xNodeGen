@@ -219,6 +219,10 @@ namespace Hexiled.World.Editor
                                 ChunkInfo ci = res.ChunkInfoFromPos();
                                 Vector2Int chunk = ci.chunk;
                                 Vector3Int pos = ci.pos;
+                                float profileDistX = Mathf.Abs(i) / (float)(brushextend);
+                                float profileDistY = Mathf.Abs(j) / (float)(brushextend);
+                                float strength = new Vector2(profileDistX, profileDistY).magnitude;
+                                strength = brushProfile.Value.Evaluate(1 - strength);
                                 if (!wdc.WorldData.TerrainChunkHolder.ContainsKey(chunk))
                                     wdc.WorldData.TerrainChunkHolder.Add(chunk, new SerializableMultiArray<TerrainTileData>());
                                 if (opState.UseCircleVoxelBrush.Value)
@@ -228,7 +232,7 @@ namespace Hexiled.World.Editor
                                         if (new Vector2(i, j).SqrMagnitude() < (brushextend) * (brushextend) + .1f)
                                         {
                                             if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
-                                            ApplyGraph(pos.x, pos.y, pos.z, chunk, pos.x, pos.z, _colors, _height.GetValue(pos.x, pos.y, pos.z));
+                                            ApplyGraph(pos.x, pos.y, pos.z, chunk, pos.x, pos.z, _colors, _height.GetValue(pos.x, pos.y, pos.z), strength);
                                         }
                                     }
                                     else
@@ -245,7 +249,7 @@ namespace Hexiled.World.Editor
                                     if (current.button == 0)
                                     {
                                         if (!chunksToRepaint.Contains(chunk)) chunksToRepaint.Add(chunk);
-                                        ApplyGraph(pos.x, pos.y, pos.z, chunk, pos.x, pos.z, _colors, _height.GetValue(pos.x, pos.y, pos.z));
+                                        ApplyGraph(pos.x, pos.y, pos.z, chunk, pos.x, pos.z, _colors, _height.GetValue(pos.x, pos.y, pos.z), strength);
                                     }
                                     else
                                     {
@@ -475,12 +479,17 @@ namespace Hexiled.World.Editor
             }
 
         }
-        void ApplyGraph(int _x, int _y, int _z, Vector2Int v, int i, int j,SerializableMultiArray<Color> _colors, float  _height)
+        void ApplyGraph(int _x, int _y, int _z, Vector2Int v, int i, int j,SerializableMultiArray<Color> _colors, float  _height, float strength)
         {
             if(useGeometryWhilePattern.Value)
                 wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].h = _height;
             if (useColorWhilePattern.Value)
-                wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color = _colors[i, 0, j];
+            {
+                Color c = _colors[i, 0, j];
+                float factor = 1 - strength * brushStength.Value / 2f;
+                c.a = factor;
+                wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color = c;
+            }
         }
         void RemoveGraph(int _x, int _y, int _z, Vector2Int v)
         {
@@ -497,7 +506,7 @@ namespace Hexiled.World.Editor
             Color c = color.Value.Evaluate(strength); 
             float factor = 1-strength * brushStength.Value / 2f;
             c.a = factor;
-            wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color= c;
+            wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color= Color.Lerp(c, wdc.WorldData.TerrainChunkHolder[v][_x, _y, _z].Color,.5f);
         }
         void meanAttach(int _x, int _y, int _z, Vector2Int v, float mean)
         {
